@@ -1,0 +1,229 @@
+<style>
+  div {
+    padding: 0;
+    margin: 0;
+  }
+  img {
+    padding: 0;
+    margin: 0;
+  }
+  .pad15{
+    padding: 0;
+    margin: 0;
+  }
+
+  #logo_navbar{
+    height:20px;
+  }
+  .dropdown-menu {
+    width: 280px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .col-xs-6{
+    width: 150px;
+  }
+  .drop-left-align{
+    text-align: left;
+    font-weight: bold;
+  }
+  .drop-left-align:hover{
+    color:red;
+    background-color: transparent;
+  }
+  .drop-right-align{
+    text-align: right;
+  }
+  .drop-right-align:hover{
+    color:red;
+    background-color: transparent;
+  }
+  .drop-border{
+    border-right: 1px solid lightgray;
+  }
+  #search-bar {
+    border: none;
+    background-color: transparent ;
+    border-bottom: 1px solid lightgray;
+    color: darkgray;
+    font-size: 24;
+  }
+  #search-bar:focus{
+    background-color: transparent;
+    border:none;
+  }
+  #content{
+    height: 500px;
+    width: 500px;
+  }
+
+  .carousel-inner img {
+    width : 100%;
+  }
+  body{
+    font-family:Arial;
+  }
+  .nav-item {
+    font-weight: bold;
+    color: #222222;
+
+  }
+  .nav-link{
+    color: #222222 !important;
+    margin-right: 30px;
+  }
+  .nav-link:hover{
+    color: #ff5050 !important;
+  }
+
+  .btn-danger {
+    background-color: #ff5050;
+    border : none;
+    margin-left: 10px;
+    width: 90px;
+    height: 34px;
+    margin-top: 3px;
+    color:white;
+  }
+  .btn-danger:hover {
+    background-color: #d44444;
+  }
+  .btn-danger:focus {
+    border:none;
+  }
+  .navbar{
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .carousel-control-next{
+      right: 50%;
+  }
+
+  .MultiCarousel { float: left; overflow: hidden; padding: 5px; width: 100%; position:relative; }
+.MultiCarousel .MultiCarousel-inner { transition: 1s ease all; float: left; }
+    .MultiCarousel .MultiCarousel-inner .item { float: left;}
+    .MultiCarousel .MultiCarousel-inner .item > div { text-align: center; color:#666;}
+ .leftLst, .rightLst { position:absolute; background-color: transparent ; top:calc(50% + 50px); border:none; width:100px;height:100px;font-size:35px;color: darkgray;}
+ .leftLst { left:-85px;background-color: none; }
+ .rightLst { right:-85px; background-color: none;}
+
+    .leftLst.over,  .rightLst.over { pointer-events: none; }
+
+
+    .originals-slider {
+      height : 200px;
+      width : 140px;
+    }
+
+    h5{
+      font-weight: bold;
+      color: #ff5050;
+      margin-top: 20px;
+      padding-left: 5%;
+    }
+
+    h6, h6>a{
+      color: #ff5050;
+      text-align: center;
+      font-size: 14px;
+    }
+    h6>a:hover{
+      text-decoration: underline;
+      color:#ff5050;
+    }
+
+    .body-container {
+      width: 100%;
+      margin: auto;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    .row{
+      padding: 0;
+    }
+    .row1{
+      padding: 0;
+      width: 90%;
+      margin: auto;
+      position: relative;
+
+    }
+    .close{
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    .modal-title {
+      margin: auto;
+      padding-left: 0;
+    }
+    .sign-in{
+      width: 40%;
+      margin-left:  30%;
+      padding: 0;
+
+    }
+
+/*   ----------------------------------- */
+
+.continue-element{
+    height: 200px;
+    width: 290px;
+    background-color: white;
+    margin-right: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.continue-img{
+    height:200px;
+    width: 140px;
+}
+
+.float{
+    float:left;
+}
+
+#continue-row{
+    width:100%;
+    height: 200px;
+    margin-top: 5%;
+}
+
+
+.info{
+    height: 220px;
+    width: 130px;
+    float:left;
+}
+
+.data{
+    margin-left: 30px;
+    margin-bottom:0;
+    margin-top:10px;
+}
+
+
+.title{
+    font-size:13px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom:0;
+}
+
+.author{
+    font-size:14px;
+    color:darkgrey;
+    margin-bottom:20px;
+}
+
+p{
+    font-size:15px;
+}
+
+.more-info{
+    text-decoration: underline;
+    text-decoration-color: #ff5050;
+    color:#ff5050;
+}
