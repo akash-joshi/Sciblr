@@ -26,31 +26,7 @@
 // multi item slider
 
 
-$(() => {
-
-const cleanInput = input => $('<div/>').text(input).html(); 
-const checkLogin = () => {
-    $.ajax({
-        url: '/check-login',
-        type: 'GET',
-        statusCode : {
-          200 : () => {
-              $(".logged-in").css("display","block");
-          },
-          500 : () => {
-              alert("REEEEEEEEEEE");
-          },
-          403 : () => {
-            $(".logged-out").css("display","block");
-          }
-        },
-        error: function (xhr, status, err) {
-          console.error(status, err.toString());
-        }
-      });
-}
-
-checkLogin();
+  $(document).ready(function () {
 var itemsMainDiv = ('.MultiCarousel');
 var itemsDiv = ('.MultiCarousel-inner');
 var itemWidth = "";
@@ -156,64 +132,6 @@ function click(ell, ee) {
     ResCarousel(ell, Parent, slide);
 }
 
-$("#signup").submit(() => {
-    const email = cleanInput($("#emailup").val());
-    const userid = cleanInput($("#userup").val());
-    const password = cleanInput($("#passup").val());
-
-    if(email && userid && password){
-        $.ajax({
-            url: '/create-user',
-            type: 'POST',
-            data: JSON.stringify({"userid":userid,"password":password,"email":email}),
-            headers: {
-              'Content-Type' : 'application/json'
-            },
-            statusCode : {
-              200 : function (data,status,xhttp) {
-                alert("User Created");
-              },
-              500 : () => {
-                  alert("We f*cked up. Contact support");
-              }
-            },
-            error: function (xhr, status, err) {
-              console.error(status, err.toString());
-            }
-          });
-    }
 });
 
-$("#signin").submit(()=>{
-    const userid = cleanInput($("#userin").val());
-    const password = cleanInput($("#passin").val());
 
-    if(userid && password){
-        $.ajax({
-            url: '/login',
-            type: 'POST',
-            data: JSON.stringify({"userid":userid,"password":password}),
-            headers: {
-              'Content-Type' : 'application/json'
-            },
-            statusCode : {
-              200 : () => {
-                alert("You have logged in");
-                $(".logged-in").css("display","block");
-              },
-              403 : () => {
-                  alert("username/password invalid");
-              }
-            },
-            error: function (xhr, status, err) {
-              console.error(status, err.toString());
-            }
-          });
-    }
-});
-
-$("#signin").submit((event) => {
-    event.preventDefault();
-  });
-
-});

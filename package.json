@@ -13,6 +13,6 @@
     "string-hash": "^1.1.3"
   },
   "scripts": {
-    "mine": "supervisor -e html,js,css server.js"
+    "start-dev": "supervisor -e html,js,css server.js"
   }
 }

@@ -1,3 +1,4 @@
+<style>
 *{
     margin: 0;
     padding: 0;
@@ -914,12 +915,4 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
-}
-
-.logged-out {
-    display: none;
-}
-
-.logged-in {
-    display: none;
 }

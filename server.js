@@ -31,7 +31,7 @@ app.use(bodyParser.json());
 
 // Route for home-page
 app.get('/', (req,res) => {
-	res.sendFile(__dirname+"/index.html");
+	res.sendFile(__dirname+"/log.html");
 });
 
 // Dynamic route for css
@@ -47,6 +47,11 @@ app.get('/js/:filename', (req,res) => {
 // Dynamic routes for posters
 app.get('/posters/:filename', (req,res) => {
 	res.sendFile(__dirname + "/posters/" + req.params.filename);
+});
+
+// Dynamic routes for icons
+app.get('/icons/:filename', (req,res) => {
+	res.sendFile(__dirname + "/icons/" + req.params.filename);
 });
 
 // POST route to create a user
@@ -101,7 +106,7 @@ app.post('/create-user', (req, res) => {
 		   console.log(err);
 		   res.status(500).send(err.toString());
 	   } else {
-		   if (data.length === 0) {
+		   if (!data.hasOwnProperty('Item')) {
 			   res.status(403).send('username/password is invalid');
 		   } else {
 			   // Match the password
@@ -117,6 +122,7 @@ app.post('/create-user', (req, res) => {
 				 // { auth: {userId }}
 				 
 				 res.status(200).send('credentials correct!');
+				 console.log(username + " logged in");
 				 
 			   } else {
 				 res.status(403).send('username/password is invalid');
@@ -139,12 +145,11 @@ app.post('/create-user', (req, res) => {
 
 		// Load the user object
 		docClient.get(params, (err, data) => {
-			console.log("CHECK : "+err);
 			if (err) {
 				console.log("if err");
 			   res.status(500).send(err.toString());
 			} else {
-			   res.send(data.Item.userid);    
+			   res.status(200).send(data.Item.userid);    
 			}
 		});
 	} else {
