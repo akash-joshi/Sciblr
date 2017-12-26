@@ -135,3 +135,231 @@ function click(ell, ee) {
 });
 
 
+ $(document).ready(function(){
+      
+$('.responsive').slick({
+  dots: false,
+  arrows: true,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 10,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1780,
+      settings: {
+        slidesToShow: 9,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false
+      }
+        
+    },
+      {
+      breakpoint: 1620,
+      settings: {
+        slidesToShow: 8,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false
+      }
+        
+    },
+      {
+      breakpoint: 1510,
+      settings: {
+        slidesToShow: 7,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false
+      }
+        
+    },
+      {
+      breakpoint: 1330,
+      settings: {
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false
+      }
+        
+    },
+    {
+      breakpoint: 1130,
+      settings: {
+        slidesToShow: 5,
+        slidesToScroll: 1
+      }
+    },
+      {
+      breakpoint: 910,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false
+      }
+        
+    },
+      {
+      breakpoint: 720,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false
+      }
+        
+    },
+      {
+      breakpoint: 560,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false
+      }
+        
+    },
+      
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+          dots: false
+    
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+        
+    
+        $('.cont-responsive').slick({
+  dots: false,
+  arrows: true,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1710,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false
+      }
+    },
+    {
+      breakpoint: 1320,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+          dots:false
+      }
+    },
+    {
+      breakpoint: 877,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+          dots:false
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+        
+        
+        
+        
+        
+    
+        $('.single-item').slick();
+    });
+  </script>
+    
+   <script>
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#placeholder-image')
+                    .attr('src', e.target.result)
+                    .width(250)
+                    .height(350);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+       
+
+       
+       
+       $('#editorModal').on('shown.bs.modal', function () {
+    $(this).find('#editor-modal-dialog').css({width:'auto',
+                               height:'auto', 
+                              'max-height':'100%'});
+});
+
+       
+       </script>
+    
+    <script>
+    
+    $(document).ready(function(){
+  
+  /* 1. Visualizing things on Hover - See next part for action on click */
+  $('#stars li').on('mouseover', function(){
+    var onStar = parseInt($(this).data('value'), 10); // The star currently mouse on
+   
+    // Now highlight all the stars that's not after the current hovered star
+    $(this).parent().children('li.star').each(function(e){
+      if (e < onStar) {
+        $(this).addClass('hover');
+      }
+      else {
+        $(this).removeClass('hover');
+      }
+    });
+    
+  }).on('mouseout', function(){
+    $(this).parent().children('li.star').each(function(e){
+      $(this).removeClass('hover');
+    });
+  });
+  
+  
+  /* 2. Action to perform on click */
+  $('#stars li').on('click', function(){
+    var onStar = parseInt($(this).data('value'), 10); // The star currently selected
+    var stars = $(this).parent().children('li.star');
+    
+    for (i = 0; i < stars.length; i++) {
+      $(stars[i]).removeClass('selected');
+    }
+    
+    for (i = 0; i < onStar; i++) {
+      $(stars[i]).addClass('selected');
+    }
+    
+    
+  });
+  
+  
+});
+
+    
+    </script>
+
+
