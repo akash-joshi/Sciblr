@@ -31,27 +31,12 @@ app.use(bodyParser.json());
 
 // Route for home-page
 app.get('/', (req,res) => {
-	res.sendFile(__dirname+"/log.html");
+	res.sendFile(__dirname+"/multiitem.html");
 });
 
-// Dynamic route for css
-app.get('/css/:filename', (req, res) => {
-	res.sendFile(__dirname+'/css/'+req.params.filename);
-});
-
-// Dynamic route for js
-app.get('/js/:filename', (req,res) => {
-	res.sendFile(__dirname+"/js/"+req.params.filename);
-});
-
-// Dynamic routes for posters
-app.get('/posters/:filename', (req,res) => {
-	res.sendFile(__dirname + "/posters/" + req.params.filename);
-});
-
-// Dynamic routes for icons
-app.get('/icons/:filename', (req,res) => {
-	res.sendFile(__dirname + "/icons/" + req.params.filename);
+// Dynamic route for all files
+app.get('/:file1/:file2', (req,res) => {
+	res.sendFile(__dirname+"/"+req.params.file1+"/"+req.params.file2);
 });
 
 // POST route to create a user
@@ -156,6 +141,15 @@ app.post('/create-user', (req, res) => {
 		res.status(403).send('You are not logged in');
 	}
  });
+
+app.get('/logout', (req, res) => {
+	delete req.session.auth;
+	res.redirect('/');
+});
+
+app.get('/myprofile', (req,res)=>{
+	res.send(__dirname+'profile.html');
+});
 
 const hash = (input, salt) => {
     // How do we create a hash?
