@@ -172,6 +172,7 @@ $("#signup").submit(() => {
             statusCode : {
               200 : function (data,status,xhttp) {
                 alert("User Created");
+                window.location.href = "/";
               },
               500 : () => {
                   alert("We f*cked up. Contact support");
@@ -200,6 +201,7 @@ $("#signin").submit(()=>{
               200 : () => {
                 alert("You have logged in");
                 $(".logged-in").css("display","block");
+                window.location.href = "/";
               },
               403 : () => {
                   alert("username/password invalid");
