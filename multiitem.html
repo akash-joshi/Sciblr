@@ -1,0 +1,616 @@
+<html>
+  <head>
+  <title>Scriblr</title>
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+  <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css" />
+      <meta charset="UTF-8">
+  </head>
+  <body>
+      
+
+      
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <a class="navbar-brand" href="#"><img src="posters/logo.png" id="logo_navbar" /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+              
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><div id="write-button-wannabe">Write</div></a>
+                <div class="dropdown-menu" id="write-dropdown-menu" aria-labelledby="navbarDropdown">
+                <div class="row">
+                    <a class="write-dropdown dropdown-item drop-left-align" data-toggle="modal"  data-target="#editorModal" href="#">
+                        New Story <img class="write-list-icons" src="icons/add.png"></a>
+                </div>
+                    <div class="row">
+                    <a class="write-dropdown dropdown-item drop-left-align" href="#" data-toggle="modal" data-target="#continueModal">
+                        Continue Story<img class="write-list-icons" src="icons/play.png"></a>
+                </div>
+            </li>
+              
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Browse<img class="browse-icons" src="icons/downarrow.png"></a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <div class="row">
+                    <div class="col-xs-6 drop-border"><a class="dropdown-item drop-left-align" href="#">My Shelf</a>
+                    </div>
+                    <div class="col-xs-6"><a class="dropdown-item drop-right-align" href="#">Romance</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 drop-border"><a class="dropdown-item drop-left-align" href="#">Originals</a>
+                    </div>
+                    <div class="col-xs-6"><a class="dropdown-item drop-right-align" href="#">Horror</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 drop-border"><a class="dropdown-item drop-left-align" href="#">Poetry</a>
+                    </div>
+                    <div class="col-xs-6"><a class="dropdown-item drop-right-align" href="#">Mystery</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 drop-border"><a class="dropdown-item drop-left-align" href="#">Microfiction</a>
+                    </div>
+                    <div class="col-xs-6"><a class="dropdown-item drop-right-align" href="#">Teen</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 drop-border"><a class="dropdown-item drop-left-align" href="#">Comics</a>
+                    </div>
+                    <div class="col-xs-6"><a class="dropdown-item drop-right-align" href="#">Fantasy</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 drop-border"><a class="dropdown-item drop-left-align" href="#">Contests</a>
+                    </div>
+                    <div class="col-xs-6"><a class="dropdown-item drop-right-align" href="#">Sci-Fi</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 drop-border"><a class="dropdown-item drop-left-align" href="#">Interactive</a>
+                    </div>
+                    <div class="col-xs-6"><a class="dropdown-item drop-right-align" href="#">General</a>
+                    </div>
+                </div>
+            </li>
+                
+            <li class="nav-item seach-combo">
+                <a class="nav-link" href="#" id="search_button">
+                    <img id="search-icon" src="icons/search.png">
+                    <input id="search-box" placeholder="Search for books, authors and tags here." type="text">
+                </a>
+            </li>
+            <span id="chhotu-icons">
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="msg-button"> <img class="nav-icons left" src="icons/envelope.png"></a>
+            </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="notif-button"> <img class="nav-icons left" src="icons/notification.png"></a>
+            </li>
+                </span>
+              
+              <li class="nav-item" id="profile-dropdown">
+              <a class="nav-link" href="#"><img class="profile-nav" src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg"><img class="browse-icons" src="icons/downarrow.png"></a>
+                  <div id="profile-dropdown-content">
+                  <p> <a href="#">My Profile</a></p>
+                  <p><a href="#"> My Account </a></p>
+                  <p><a href="#"> Settings </a></p>
+                  <p><a id="coral-logout" href="#"> Logout</a></p>
+                  </div>
+              
+              </li>
+              
+          </ul>
+        </div>
+        </div>
+      </nav>
+      
+      
+      
+<!--Sign In Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Sign In</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username/email">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          </div>
+          <h6>New to Scriblr?<a href="#" data-dismiss="modal" data-toggle="modal" data-target="#myModal1"> Sign Up </a></h6>
+          <button type="submit" class="btn btn-danger sign-in">Start Reading!</button>
+
+      </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Sign Up Modal -->
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel1">Sign Up</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          </div>
+          <button type="submit" class="btn btn-danger sign-in">Start Reading!</button>
+
+      </form>
+      </div>
+    </div>
+  </div>
+</div>
+      
+  <div id="editorModal" class="modal fade" role="dialog">
+  <div class="modal-dialog" id="editor-modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content" id="editor-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title" id="editor-modal-title"><strong>New Story</strong></h4>
+      </div>
+      <div class="modal-body">
+        <div class="editor-modal-left">
+            <div class="image-upload">
+                <label for="file-input">
+                    <img id="placeholder-image" src="https://quartzforms.s3.amazonaws.com/uploads/product/image/3/index_Absolute_White_400.jpg">
+                </label>
+
+                <input id="file-input" type="file" accept="image/jpeg" onchange="readURL(this);"/>
+            </div>
+          <div class="cover-guideline">
+                <p> Visit our <span class="underlined"> cover guidelines</span> if you're having trouble creating or choosing a cover for your story.</p>
+                    
+        </div>
+        </div>
+        <div class="editor-modal-right">
+            <form action="editor.html" method="POST" id="editorform">
+                <label class="editor-form-element editor-text-header" for="title"><strong>Title</strong>  </label>
+                <input type="text" name="title" id="title" class="editor-form-element" required>
+                <div class="clear"></div>
+                <label class="editor-form-element editor-text-header" for="description"><strong> Description</strong></label>
+                <textarea  class="editor-form-element" id="editor-description" name="description" required></textarea>
+                <label class="editor-form-element editor-text-header" for="tags"><strong> Tags</strong></label>
+                <input type ="text" name="tags" id="tags" data-role="tagsinput" class="editor-form-element" required>
+                
+                <div class="select-wrap" class="editor-form-element">
+                 <label class="editor-form-element" for="category-dropdown" id="category-dropdown-header"><strong>Category:</strong></label>
+                <select name="category-dropdown" id="category-dropdown" form="editorform" required>
+                      <option value="shortstory">Short Story</option>
+                      <option value="novel">Novel</option>
+                      <option value="novella">Novella</option>
+                      <option value="interactive">Interactive</option>
+                </select>
+                    
+                </div>
+                <div id="help-text-categories">
+                <p id="guideline-help"> If you need help determining which category your story fits in, visit our <span class="underlined">category guidelines.</span> </p>
+                
+                </div>
+                <div class="clear"></div>
+                <div id="three-dropdown-container">
+                    <div class="select-wrap" id="genre-select-wrap" class="editor-form-element">
+                 <label class="editor-form-element" for="genre-dropdown" id="genre-dropdown-header"><strong>Genre:</strong></label>
+                <select name="genre-dropdown" id="genre-dropdown" form="editorform" required>
+                      <option value="mystery">Mystery</option>
+                      <option value="romance">Romance</option>
+                      <option value="action">Action</option>
+                      <option value="fantasy">Fantasy</option>
+                </select>
+                    
+                </div>
+                
+                    <div class="select-wrap" id="language-select-wrap" class="editor-form-element">
+                 <label class="editor-form-element" for="language-dropdown" id="language-dropdown-header"><strong>Language:</strong></label>
+                <select name="language-dropdown" id="language-dropdown" form="editorform" required>
+                      <option value="english">English</option>
+                      <option value="novel">Novel</option>
+                      <option value="novella">Novella</option>
+                      <option value="interactive">Interactive</option>
+                </select>
+                    
+                </div>
+                
+                    <div class="select-wrap" id="copyright-select-wrap" class="editor-form-element">
+                 <label class="editor-form-element" for="copyright-dropdown" id="copyright-dropdown-header"><strong>Copyright:</strong></label>
+                <select name="copyright-dropdown" id="copyright-dropdown" form="editorform required">
+                      <option value="public">Public Domain</option>
+                      <option value="novel">Novel</option>
+                      <option value="novella">Novella</option>
+                      <option value="interactive">Interactive</option>
+                </select>
+                    
+                </div>
+            </div>
+                <p id="mature-header">Mature Content:</p>
+                <div id="mature-toggle">
+                <label class="switch editor-form-element">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                </div>
+                
+                <div id="help-text-mature">
+                <p id="guideline-mature"> If your story contains graphic descriptions of violence, strong language, secuality and/or other mature themes please keep this setting on. For further details, visit our  <span class="underlined">content guidelines.</span> </p>
+                
+                </div>
+                <div id="button-group">
+                <button class="generic-button cancel-button" data-dismiss="modal"> Cancel </button>
+                <button class="generic-button submit-button"> Save </button>
+                </div>
+            </form>
+      </div>
+    </div>
+
+  </div>
+</div>
+    </div>
+    
+<!-- Continue Book Modal -->
+    
+    <!-- Trigger the modal with a button -->
+
+<!-- Modal -->
+<div id="continueModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content" id="continue-editor-modal">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title" id="continue-write-header">My Stories</h4>
+      </div>
+      <div class="modal-body">
+        <div class="continue-write-element">
+           <img class="continue-write-image" src ="posters/2.jpg"> 
+           <h5 class="continue-editor-title">The Lightning Thief </h5>
+            <p class="continue-editor-summary"> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+              <p class="continue-editor-info"> Created:<span class="continue-editor-bold"> 1st May, 2016.</span></p>
+              <p class="continue-editor-info"> Last Updated: <span class="continue-editor-bold"> 31st June, 2017.</span></p>
+            <div class="continue-editor-right">
+            <button class="continue-write-button">Continue Writing </button>
+            <div class="view-as-reader"><a class="unstyled-links" href="#"><img class="view-as-reader-icon" src="icons/eye.png"> View as reader </a></div>
+            <div class="view-as-reader"><a class="unstyled-links" href="#"><img class="view-as-reader-icon" src="icons/edit.png"> Edit Story Details </a></div>
+        </div>
+          </div>
+          
+   <div class="continue-write-element">
+           <img class="continue-write-image" src ="posters/2.jpg"> 
+           <h5 class="continue-editor-title">The Lightning Thief </h5>
+            <p class="continue-editor-summary"> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+              <p class="continue-editor-info"> Date Created:<span class="continue-editor-bold"> 1st May, 2016.</span></p>
+              <p class="continue-editor-info"> Last Updated On: <span class="continue-editor-bold"> 31st June, 2017.</span></p>
+            <div class="continue-editor-right">
+            <button class="continue-write-button">Continue Writing </button>
+            <div class="view-as-reader"><a class="unstyled-links" href="#"><img class="view-as-reader-icon" src="icons/eye.png"> View as reader </a></div>
+            <div class="view-as-reader"><a class="unstyled-links" href="#"><img class="view-as-reader-icon" src="icons/edit.png"> Edit Story Details </a></div>
+        </div>
+          </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+      
+      
+      
+  <div class="single-item" id="featured-slider">
+       <div class="featured-slide-dimensions"><img class="featured-image" src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1353&q=80"></div>
+    <div class="featured-slide-dimensions"><img class="featured-image" src="https://images.unsplash.com/photo-1483356256511-b48749959172?auto=format&fit=crop&w=1350&q=80"></div>
+    <div class="featured-slide-dimensions"><img class="featured-image" src="posters/3.jpg"></div>
+      <div class="featured-slide-dimensions"><img class="featured-image" src="posters/3.jpg"></div>
+      <div class="featured-slide-dimensions"><img class="featured-image" src="posters/3.jpg"></div>
+      <div class="featured-slide-dimensions"><img class="featured-image" src="posters/3.jpg"></div>
+</div>
+ <div class="body-container">
+    <div class="coral-headers"> Scriblr Originals </div>
+  <div class="responsive">
+    <div class="slide-dimensions"><img class="original-image" src="posters/1.jpg"></div>
+    <div class="slide-dimensions"><img class="original-image" src="posters/2.jpg"></div>
+    <div class="slide-dimensions"><img class="original-image" src="posters/3.jpg"></div>
+      <div class="slide-dimensions"><img class="original-image" src="posters/4.jpg"></div>
+      <div class="slide-dimensions"><img class="original-image" src="posters/5.jpg"></div>
+      <div class="slide-dimensions"><img class="original-image" src="posters/6.jpg"></div>
+      <div class="slide-dimensions"><img class="original-image" src="posters/2.jpg"></div>
+      <div class="slide-dimensions"><img class="original-image" src="posters/3.jpg"></div>
+      <div class="slide-dimensions"><img class="original-image" src="posters/3.jpg"></div>
+      <div class="slide-dimensions"><img class="original-image" src="posters/3.jpg"></div>
+      <div class="slide-dimensions"><img class="original-image" src="posters/3.jpg"></div>
+      <div class="slide-dimensions"><img class="original-image" src="posters/3.jpg"></div>
+      <div class="slide-dimensions"><img class="original-image" src="posters/3.jpg"></div>
+  </div>
+      <div class="coral-headers"> Continue Reading </div>
+       <div class="cont-responsive ">
+    <div class="continue-slide-dimensions">
+        <img class="original-image" src="posters/3.jpg">
+        <div class="continue-write-titles"> Perks of being a Wallflower</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+        <div></div>
+        <div class="continue-write-section-no"> Section 5:</div>
+        <div class="continue-write-section">Till Death Do Us Apart</div>
+        <div class="more-info-coral"> More Information</div>
+        <div class="progress-bar-wrapper">
+        <div class="progress-bar-coral"></div>
+        </div>
+        <div class="percentage-done"> 37% Completed</div>
+        
+    </div>
+           
+    <div class="continue-slide-dimensions">
+         <img class="original-image" src="posters/3.jpg">
+        <div class="continue-write-titles"> Perks of being a Wallflower</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+        <div></div>
+        <div class="continue-write-section-no"> Section 5:</div>
+        <div class="continue-write-section">Till Death Do Us Apart</div>
+        <div class="more-info-coral"> More Information</div>
+        <div class="progress-bar-wrapper">
+        <div class="progress-bar-coral"></div>
+        </div>
+        <div class="percentage-done"> 37% Completed</div>
+    </div>
+           
+    <div class="continue-slide-dimensions">
+         <img class="original-image" src="posters/3.jpg">
+        <div class="continue-write-titles"> Perks of being a Wallflower</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+        <div></div>
+        <div class="continue-write-section-no"> Section 5:</div>
+        <div class="continue-write-section">Till Death Do Us Apart</div>
+        <div class="more-info-coral"> More Information</div>
+        <div class="progress-bar-wrapper">
+        <div class="progress-bar-coral"></div>
+        </div>
+        <div class="percentage-done"> 37% Completed</div>
+           </div>
+           
+           
+      <div class="continue-slide-dimensions">
+           <img class="original-image" src="posters/3.jpg">
+        <div class="continue-write-titles"> Perks of being a Wallflower</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+        <div></div>
+        <div class="continue-write-section-no"> Section 5:</div>
+        <div class="continue-write-section">Till Death Do Us Apart</div>
+        <div class="more-info-coral"> More Information</div>
+        <div class="progress-bar-wrapper">
+        <div class="progress-bar-coral"></div>
+        </div>
+        <div class="percentage-done"> 37% Completed</div>
+           </div>
+      <div class="continue-slide-dimensions"><img class="original-image" src="posters/3.jpg"></div>
+      <div class="continue-slide-dimensions"><img class="original-image" src="posters/3.jpg"></div>
+      <div class="continue-slide-dimensions"><img class="original-image" src="posters/3.jpg"></div>
+      <div class="continue-slide-dimensions"><img class="original-image" src="posters/3.jpg"></div>
+      <div class="continue-slide-dimensions"><img class="original-image" src="posters/3.jpg"></div>
+      <div class="continue-slide-dimensions"><img class="original-image" src="posters/3.jpg"></div>
+      <div class="continue-slide-dimensions"><img class="original-image" src="posters/3.jpg"></div>
+      <div class="continue-slide-dimensions"><img class="original-image" src="posters/3.jpg"></div>
+      <div class="continue-slide-dimensions"><img class="original-image" src="posters/3.jpg"></div>
+  </div>
+     
+     </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script src="https://use.fontawesome.com/8f37611cde.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      
+$('.responsive').slick({
+  dots: false,
+  arrows: true,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 10,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1780,
+      settings: {
+        slidesToShow: 9,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false
+      }
+        
+    },
+      {
+      breakpoint: 1620,
+      settings: {
+        slidesToShow: 8,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false
+      }
+        
+    },
+      {
+      breakpoint: 1510,
+      settings: {
+        slidesToShow: 7,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false
+      }
+        
+    },
+      {
+      breakpoint: 1330,
+      settings: {
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false
+      }
+        
+    },
+    {
+      breakpoint: 1130,
+      settings: {
+        slidesToShow: 5,
+        slidesToScroll: 1
+      }
+    },
+      {
+      breakpoint: 910,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false
+      }
+        
+    },
+      {
+      breakpoint: 720,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false
+      }
+        
+    },
+      {
+      breakpoint: 560,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false
+      }
+        
+    },
+      
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+          dots: false
+    
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+        
+    
+        $('.cont-responsive').slick({
+  dots: false,
+  arrows: true,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1710,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false
+      }
+    },
+    {
+      breakpoint: 1320,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+          dots:false
+      }
+    },
+    {
+      breakpoint: 877,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+          dots:false
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+        
+        
+        
+        
+        
+    
+        $('.single-item').slick();
+    });
+  </script>
+    
+   <script>
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#placeholder-image')
+                    .attr('src', e.target.result)
+                    .width(250)
+                    .height(350);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+       
+
+       
+       
+       $('#editorModal').on('shown.bs.modal', function () {
+    $(this).find('#editor-modal-dialog').css({width:'auto',
+                               height:'auto', 
+                              'max-height':'100%'});
+});
+
+       
+       </script>
+
+  </body>
+</html>
