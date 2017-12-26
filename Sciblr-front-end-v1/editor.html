@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>Editor</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <div class="editor-container">
+    <button id="back-home-button" class="generic-button submit-button"><a class="unstyled-white" href="multiitem.html">Back to Home</a></button>
+    <img id="editor-logo" src="posters/logo.png">
+    <div id="sections-dropdown"> <span class="bold">Section 1: </span>Lorem Ipsum <img class="browse-icons" src="icons/downarrow.png">
+        <div class="section-dropdown-content">
+        <p class="section-element bold"> Sections <span class="coral right"> New Section</span><img  class="sections-images right plus-down" src="icons/plus-coral.png"></p>
+            
+        <p class="section-element"><span class="bold"> 1:</span><span class="section-title-little"> Stephen Curry</span><img class="sections-images" src="icons/eye.png"> 2.2K<img class="sections-images" src="icons/edit.png"><img class="sections-images" src="icons/delete.png"></p>
+            
+      <p class="section-element"><span class="bold"> 1:</span><span class="section-title-little"> Heartbreak City</span><img class="sections-images section-img-eye" src="icons/eye.png"> 2.2K<img class="sections-images" src="icons/edit.png"><img class="sections-images" src="icons/delete.png"></p>
+            
+            <p class="section-element"><span class="bold"> 1:</span><span class="section-title-little"> Stephen Curry</span><img class="sections-images" src="icons/eye.png"> 2.2K<img class="sections-images" src="icons/edit.png"><img class="sections-images" src="icons/delete.png"></p>
+            
+            <p class="section-element"><span class="bold"> 1:</span><span class="section-title-little"> Stephen Curry</span><img class="sections-images" src="icons/eye.png"> 2.2K<img class="sections-images" src="icons/edit.png"><img class="sections-images" src="icons/delete.png"></p>
+         </div>
+        </div>
+    <button id="publish-button" class="generic-button submit-button"> Publish Story</button>
+    <button id="cancel-editor-button" class="generic-button cancel-button"> Cancel </button>
+    
+        <div id="section-title"><input name="section-title" id="section-title-box" placeholder="Section Title" type="text" onkeydown="display(this)">
+        <p id="final-section-name" onkeydown="remove(this)"></p></div>
+        <hr>
+        <div id="writing-space">
+            <textarea id="editor-writing-space" name="user-writing-space"></textarea>    
+            
+            
+            
+        </div>
+        
+        
+       
+        </div>
+         <script type="text/javascript" src="js/jquery-3.2.1.min.js" ></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script src="https://use.fontawesome.com/8f37611cde.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+        
+        
+        <script>
+        function display(ele) {
+            if(event.key ==='Enter')
+                {
+                    document.getElementById('final-section-name').innerHTML = ele.value;
+                    document.getElementById("section-title-box").style.display = "none";
+                          $("#final-section-name").click(function(){
+                                    document.getElementById("section-title-box").style.display="block";
+                                   document.getElementById("final-section-name").style.display="none";
+                    });
+                    
+                     document.getElementById("final-section-name").style.display="block";
+                }
+            
+                   
+        }
+                    
+                  
+            
+                        
+            
+            
+        
+        </script>
+    </body>
+
+</html>
