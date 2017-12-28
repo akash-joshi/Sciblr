@@ -1,5 +1,10 @@
 
   var temp=$('.search_collapse').html();
+  let mature=false;
+  $("#mature-toggle").mouseup(()=>{
+    if(!mature) {mature=true;}
+    else {mature = false;}
+    });
   $('#search_button').click(function(){
     $('.search_collapse').fadeOut("fast",function(){
       var new_div=$("<div class='container form-group' id='new'><input class='form-control' id='search-bar' type='text'/></div>");
@@ -21,52 +26,51 @@
     });
     });
   });
+  
 
 
 // multi item slider
 
 
 $(() => {
+    
 
-const cleanInput = input => $('<div/>').text(input).html(); 
-const checkLogin = () => {
-    $.ajax({
-        url: '/check-login',
-        type: 'GET',
-        statusCode : {
-          200 : () => {
-              $(".logged-in").css("display","block");
-          },
-          500 : () => {
-              alert("REEEEEEEEEEE");
-          },
-          403 : () => {
-            $(".logged-out").css("display","block");
-          }
-        },
-        error: function (xhr, status, err) {
-          console.error(status, err.toString());
-        }
-      });
-}
+    const cleanInput = input => $('<div/>').text(input).html(); 
+    const checkLogin = () => {
+        $.ajax({
+            url: '/check-login',
+            type: 'GET',
+            statusCode : {
+            200 : () => {
+                $(".logged-in").css("display","block");
+            },
+            500 : () => {
+                alert("REEEEEEEEEEE");
+            },
+            403 : () => {
+                $(".logged-out").css("display","block");
+            }
+            },
+            error: function (xhr, status, err) {
+            console.error(status, err.toString());
+            }
+        });
+    }
 
-checkLogin();
-var itemsMainDiv = ('.MultiCarousel');
-var itemsDiv = ('.MultiCarousel-inner');
-var itemWidth = "";
+    checkLogin();
+    var itemsMainDiv = ('.MultiCarousel');
+    var itemsDiv = ('.MultiCarousel-inner');
+    var itemWidth = "";
 
-$('.leftLst, .rightLst').click(function () {
-    var condition = $(this).hasClass("leftLst");
-    if (condition)
-        click(0, this);
-    else
-        click(1, this)
-});
+    $('.leftLst, .rightLst').click(function () {
+        var condition = $(this).hasClass("leftLst");
+        if (condition)
+            click(0, this);
+        else
+            click(1, this)
+    });
 
-ResCarouselSize();
-
-
-
+    ResCarouselSize();
 
 $(window).resize(function () {
     ResCarouselSize();
@@ -185,37 +189,74 @@ $("#signup").submit(() => {
     }
 });
 
-$("#signin").submit(()=>{
-    const userid = cleanInput($("#userin").val());
-    const password = cleanInput($("#passin").val());
+    $("#signin").submit(()=>{
+        const userid = cleanInput($("#userin").val());
+        const password = cleanInput($("#passin").val());
 
-    if(userid && password){
-        $.ajax({
-            url: '/login',
-            type: 'POST',
-            data: JSON.stringify({"userid":userid,"password":password}),
-            headers: {
-              'Content-Type' : 'application/json'
-            },
-            statusCode : {
-              200 : () => {
-                alert("You have logged in");
-                $(".logged-in").css("display","block");
-                window.location.href = "/";
-              },
-              403 : () => {
-                  alert("username/password invalid");
-              }
-            },
-            error: function (xhr, status, err) {
-              console.error(status, err.toString());
-            }
-          });
-    }
-});
+        if(userid && password){
+            $.ajax({
+                url: '/login',
+                type: 'POST',
+                data: JSON.stringify({"userid":userid,"password":password}),
+                headers: {
+                'Content-Type' : 'application/json'
+                },
+                statusCode : {
+                200 : () => {
+                    alert("You have logged in");
+                    $(".logged-in").css("display","block");
+                    window.location.href = "/";
+                },
+                403 : () => {
+                    alert("username/password invalid");
+                }
+                },
+                error: function (xhr, status, err) {
+                console.error(status, err.toString());
+                }
+            });
+        }
+    });
 
-$("#signin").submit((event) => {
-    event.preventDefault();
-  });
+    $('#editorform').submit(()=>{
+        const title = cleanInput($('#title').val());
+        const desc = $('#editor-description').val();
+        const tags = $('#tags').val();
+        const category = $('#category-dropdown').val();
+        const genre = $('#genre-dropdown').val();
+        const language = $('#language-dropdown').val();
+        const copyright = $('#copyright-dropdown').val();
+        const image = $('#placeholder-image').attr('src');
+        const params = {
+            title : title,
+            desc : desc,
+            tags : tags,
+            category : category,
+            genre : genre,
+            language : language,
+            copyright : copyright,
+            mature : mature,
+            image : image
+        }
+        if(title && description){
+            $.ajax({
+                url: '/new-story',
+                type: 'POST',
+                data: JSON.stringify(params),
+                headers: {
+                'Content-Type' : 'application/json'
+                },
+                statusCode : {
+                200 : () => {
+                    alert("Book Created");
+                    window.location.href = "/";
+                }
+                },
+                error: function (xhr, status, err) {
+                console.error(status, err.toString());
+                }
+            });
+        }
+    });
 
 });

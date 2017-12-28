@@ -148,7 +148,7 @@ app.get('/logout', (req, res) => {
 });
 
 app.get('/myprofile', (req,res)=>{
-	res.send(__dirname+'/profile.html');
+	res.sendFile(__dirname+'/profile.html');
 });
 
 const hash = (input, salt) => {
