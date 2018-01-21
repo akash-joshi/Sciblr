@@ -1,0 +1,528 @@
+<html>
+  <head>
+  <title>Scriblr</title>
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+  <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css" />
+      <meta charset="UTF-8">
+  </head>
+  <body>
+      
+
+      
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <a class="navbar-brand" href="#"><img id="nib-logo" src="icons/scriblrnib.png"> <img src="posters/logo.png" id="logo_navbar" /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+              
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><div id="write-button-wannabe">Write</div></a>
+                <div class="dropdown-menu" id="write-dropdown-menu" aria-labelledby="navbarDropdown">
+                <div class="row">
+                    <a class="write-dropdown dropdown-item drop-left-align write-positioning" data-toggle="modal"  data-target="#editorModal" href="#">
+                        New Story <img class="write-list-icons" src="icons/add.png"></a>
+                </div>
+                    <div class="row">
+                    <a class="write-dropdown dropdown-item drop-left-align write-positioning" href="#" data-toggle="modal" data-target="#continueModal">
+                        Continue Story<img class="write-list-icons" src="icons/play.png"></a>
+                </div>
+            </li>
+              
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Browse<img class="browse-icons" src="icons/downarrow.png"></a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <div class="row">
+                    <div class="col-xs-6 drop-border"><a class="dropdown-item drop-left-align" href="shelf.html">My Shelf</a>
+                    </div>
+                    <div class="col-xs-6"><a class="dropdown-item drop-right-align" href="#">Romance</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 drop-border"><a class="dropdown-item drop-left-align" href="#">Originals</a>
+                    </div>
+                    <div class="col-xs-6"><a class="dropdown-item drop-right-align" href="#">Horror</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 drop-border"><a class="dropdown-item drop-left-align" href="#">Poetry</a>
+                    </div>
+                    <div class="col-xs-6"><a class="dropdown-item drop-right-align" href="#">Mystery</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 drop-border"><a class="dropdown-item drop-left-align" href="#">Microfiction</a>
+                    </div>
+                    <div class="col-xs-6"><a class="dropdown-item drop-right-align" href="#">Teen</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 drop-border"><a class="dropdown-item drop-left-align" href="#">Comics</a>
+                    </div>
+                    <div class="col-xs-6"><a class="dropdown-item drop-right-align" href="#">Fantasy</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 drop-border"><a class="dropdown-item drop-left-align" href="#">Contests</a>
+                    </div>
+                    <div class="col-xs-6"><a class="dropdown-item drop-right-align" href="#">Sci-Fi</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 drop-border"><a class="dropdown-item drop-left-align" href="#">Interactive</a>
+                    </div>
+                    <div class="col-xs-6"><a class="dropdown-item drop-right-align" href="#">General</a>
+                    </div>
+                </div>
+            </li>
+                
+            <li class="nav-item search-combo">
+                <a class="nav-link" href="#" id="search_button">
+                    <img id="search-icon" src="icons/search.png">
+                    <input id="search-box" placeholder="Search for books, authors and tags here." type="text">
+                </a>
+            </li>
+            <span id="chhotu-icons">
+              <li class="nav-item">
+                <a class="nav-link" href="chat.html" id="msg-button"><i class="fa fa-envelope nav-icons left" aria-hidden="true"></i></a>
+            </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="notif-button"><i class="fa fa-bell nav-icons left" aria-hidden="true"></i></a>
+            </li>
+                </span>
+              
+              <li class="nav-item" id="profile-dropdown">
+              <a class="nav-link" href="#"><img class="profile-nav" src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg"><img class="browse-icons" id="profile-down-arrow" src="icons/downarrow.png"></a>
+                  <div id="profile-dropdown-content">
+                  <p> <a href="#">My Profile</a></p>
+                  <p><a href="#"> My Account </a></p>
+                  <p><a href="#"> Settings </a></p>
+                  <p><a id="coral-logout" href="#"> Logout</a></p>
+                  </div>
+              
+              </li>
+              
+          </ul>
+        </div>
+        </div>
+      </nav>
+    <div class="profile-container">
+    <div class="profile-picture-and-name">
+        
+            <div class="image-upload">
+                <label for="file-input">
+                    <img id="profile-placeholder-image" src="https://quartzforms.s3.amazonaws.com/uploads/product/image/3/index_Absolute_White_400.jpg">
+                </label>
+
+                <input id="file-input" type="file" accept="image/jpeg" onchange="readURL(this);"/>
+            </div>
+        
+        <div id="pen-title"><input name="pen-title" id="pen-name-box" placeholder="Enter Pen Name." type="text" onkeydown="display(this)">
+        <p id="final-pen-name" onkeydown="remove(this)"></p></div>
+        
+        </div>
+        
+    <div class="profile-coral-headers"><span class="profile-coral-underline">Profile Information</span>
+         
+        
+        </div>
+        <div class="profile-information">
+        <div class="pinfo-header"> Username </div>
+        <div class="pinfo-header-value"> @Jetstream</div>
+
+        <div class="pinfo-header">About<span id="characters"></span><span id="max-characters">entered out of 350.</span></div>
+            <div id="bio-title"><textarea  maxlength="350" name="bio-title" id="bio-box" placeholder="Enter your bio here." type="text" onkeydown="display4(this)"></textarea>
+        <p id="final-bio" onkeydown="remove(this)"></p></div>
+        
+            <div class="social-links-profile">
+                <img  class="social-links" src="icons/social-links/fb.png">
+                <img  class="social-links circle-ig"  src="icons/social-links/ig.png">
+                <img  class="social-links"  src="icons/social-links/tumblr.png">
+                <img  class="social-links"  src="icons/social-links/twitter.png">
+                <img  class="social-links"  src="icons/social-links/gplus.png">
+            </div>
+            
+            <div class="view-public-profile"><a class="grey-profile-links" href="#"> View Public Profile</a></div>
+            <div class="view-public-profile upper-profile"><a class="grey-profile-links" href="#">Change Banner Image</a> </div>
+        </div>
+        
+        <div class="profile-coral-headers up20"><span class="profile-coral-underline">Account Information</span>
+        
+        </div>
+        <div class="acc-info-element">
+        <div class="pinfo-element-header"> Email</div>
+       <div id="email-title"><input name="email-title" id="email-box" value="justinphillips@gmail.com" type="text" onkeydown="display2(this)">
+        <p id="final-email-id" onkeydown="remove(this)"></p></div>
+         <button id="edit-email-button" class="profile-element-edit-button"> Edit</button>
+    
+    </div>
+        
+           <div class="acc-info-element">
+        <div class="pinfo-element-header"> Password</div>
+           <div id="password-title"><input name="email-title" id="password-box" value="demopassword" type="password" onkeydown="display3(this)">
+            <input class="show-positioning" type="checkbox" onclick="showFunction()"><p class="show-styling">Show Password</p>
+        <p id="final-password" onkeydown="remove(this)"></p></div>
+         <button class="profile-element-edit-button"> Edit</button>
+    
+    </div>
+        
+           <div class="acc-info-element">
+        <div class="pinfo-element-header"> Date of Birth</div>
+          <div id="date-title"><input name="date-title" id="date-box" value="12/1/99" type="date" onkeydown="display4(this)">
+        <p id="final-date" onkeydown="remove(this)"></p></div>
+         
+    
+    </div>
+        
+           <div class="acc-info-element">
+        <div class="pinfo-element-header"> Location</div>
+              <select class="selectpicker countrypicker"
+
+            data-live-search="true"
+
+            data-default="United States"
+
+            data-flag="true">
+
+</select>
+
+    
+    </div>
+        
+           <div class="acc-info-element">
+        <div class="pinfo-element-header"> Gender</div>
+       <select class="gender-pick-profile">
+               <option> Male</option>
+               <option> Female</option>
+               <option> Other</option>
+               </select>
+    
+    </div>
+         <div class="profile-coral-headers up20 up50 up-the-profile"><span class="profile-coral-underline"><span class="textmover">Membership</span></span>
+        
+        </div>
+        
+              <div class="acc-info-element">
+        <div class="pinfo-element-header down21"> Membership Version</div>
+        <div class="pinfo-element-header-value"> Free</div>
+         <button class="subscribe-coral-button"> Subscribe to Scriblr Premium</button>
+    
+    </div>
+        
+              <div class="acc-info-element">
+        <div class="pinfo-element-header"> Payment Method</div>
+        <div class="pinfo-element-header-value"> MasterCard: **** **** **** 7699 </div>
+         <button class="profile-element-edit-button"> Update</button>
+    
+    </div>
+        
+         <div class="profile-coral-headers up20 up50 up-the-profile"><span class="profile-coral-underline"><span class="textmover">Notifications & Updates</span></span>
+        
+        </div>
+        
+        <div class="notif-three-element">
+        
+                    <div class="acc-info-element">
+        <div class="pinfo-element-header"> Shelf Story Updates</div>
+        <div class="pinfo-element-header-value"> Get email updates about updates to stories saved in your Shelf. </div>
+           <div class="profile-toggle">
+                <label class="switch editor-form-element">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                </div>
+    
+    </div>
+                    <div class="acc-info-element">
+        <div class="pinfo-element-header"> Writer Story Updates</div>
+        <div class="pinfo-element-header-value"> Get email updates about new stories by writers you follow. </div>
+         <div class="profile-toggle">
+                <label class="switch editor-form-element">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                </div>
+    
+    </div>
+                    <div class="acc-info-element">
+        <div class="pinfo-element-header"> Scriblr Originals</div>
+        <div class="pinfo-element-header-value"> Get email updates about new Scriblr Originals and formats.</div>
+         <div class="profile-toggle">
+                <label class="switch editor-form-element">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                </div>
+    
+    </div>
+        
+        </div>
+        
+        <div class="notif-three-element smaller-notif">
+        
+                    <div class="acc-info-element">
+        <div class="pinfo-element-header"> Follower and View Milestones</div>
+        <div class="pinfo-element-header-value"> Get email updates when you reach major follower and view milestones. </div>
+         <div class="profile-toggle">
+                <label class="switch editor-form-element">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                </div>
+    
+    </div>
+                    <div class="acc-info-element">
+        <div class="pinfo-element-header"> Message Updates</div>
+        <div class="pinfo-element-header-value"> Get email updates about new messages. </div>
+         <div class="profile-toggle">
+                <label class="switch editor-form-element">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                </div>
+    
+    </div>
+                      <div class="acc-info-element">
+        <div class="pinfo-element-header"> Scriblr Originals</div>
+        <div class="pinfo-element-header-value"> Get email updates about new Scriblr Originals and formats. </div>
+         <div class="profile-toggle">
+                <label class="switch editor-form-element">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                </div>
+    
+    </div>
+        
+        </div>
+        
+        <div class="notif-three-element smaller-notif2">
+        
+                      <div class="acc-info-element">
+        <div class="pinfo-element-header"> Scriblr Updates</div>
+        <div class="pinfo-element-header-value"> Get email updates about major Scriblr news. </div>
+         <div class="profile-toggle">
+                <label class="switch editor-form-element">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                </div>
+    
+    </div>
+                      <div class="acc-info-element">
+        <div class="pinfo-element-header"> Recommended Stories</div>
+        <div class="pinfo-element-header-value"> Get email updates about recommended stories for you. </div>
+         <div class="profile-toggle">
+                <label class="switch editor-form-element">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                </div>
+    
+    </div>
+                      <div class="acc-info-element">
+        <div class="pinfo-element-header"> Analytics</div>
+        <div class="pinfo-element-header-value"> Get weekly email updates about the major statistics of your profile. </div>
+         <div class="profile-toggle">
+                <label class="switch editor-form-element">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                </div>
+    
+    </div>
+        
+    </div>
+    </div>
+    
+           <footer class="smaller">
+            <div> <img class="footer-logo" src="posters/logo.png"></div>
+           <i class="fa fa-facebook" aria-hidden="true"></i>
+           <i class="fa fa-instagram" aria-hidden="true"></i>
+           <i class="fa fa-twitter" aria-hidden="true"></i>
+           <p class="copyright-footer"><i class="fa fa-copyright" aria-hidden="true"></i> Scriblr,2017.</p>
+           
+           <div class="footer-right-links">
+           <a class="footer-links" href="#"> About</a>
+            <a class="footer-links" href="#"> Jobs</a>
+               <a class="footer-links" href="#"> Team</a>
+            <a class="footer-links" href="#"> Terms & Conditions</a>
+               <a class="footer-links" href="#"> Help</a>
+           </div>
+      </footer>
+    
+     
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script src="https://use.fontawesome.com/8f37611cde.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js">
+    </script>
+    <script src="js/countrypicker.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.dotdotdot/3.1.0/jquery.dotdotdot.js"></script>
+    
+    <script>
+        
+                function display(ele) {
+            if(event.key ==='Enter')
+                {
+                    document.getElementById('final-pen-name').innerHTML = ele.value;
+                    document.getElementById("edit-pen-name").style.display = "none";
+                          $("#final-pen-name").click(function(){
+                                    document.getElementById("edit-pen-name").style.display="block";
+                                   document.getElementById("final-pen-name").style.display="none";
+                    });
+                    
+                     document.getElementById("final-pen-name").style.display="block";
+                }
+            
+                   
+        }
+        
+    </script>
+    
+    <script>
+        
+                 
+                    
+                   
+        
+        
+       function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#profile-placeholder-image')
+                    .attr('src', e.target.result)
+                    .width(100)
+                    .height(100)
+                .borderRadius('50%');
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+        
+        
+               function display(ele) {
+            if(event.key ==='Enter')
+                {
+                    document.getElementById('final-pen-name').innerHTML = ele.value;
+                    document.getElementById("pen-name-box").style.display = "none";
+                          $("#final-pen-name").click(function(){
+                                    document.getElementById("pen-name-box").style.display="block";
+                                   document.getElementById("final-pen-name").style.display="none";
+                    });
+                    
+                     document.getElementById("final-pen-name").style.display="block";
+                }
+            
+                   
+        }
+        
+        
+                  function display2(ele) {
+                      
+                
+                       if(event.key ==='Enter')
+                {
+                    document.getElementById('final-email-id').innerHTML = ele.value;
+                    document.getElementById("email-box").style.display = "none";
+                          $("#final-email-id").click(function(){
+                                    document.getElementById("email-box").style.display="block";
+                                   document.getElementById("final-pemail-id").style.display="none";
+                    });
+                    
+                     document.getElementById("final-email-id").style.display="block";
+                }
+            
+                   
+        }
+        
+        
+            
+                  function display3(ele) {
+                      
+                
+                       if(event.key ==='Enter')
+                {
+                    document.getElementById('final-password').innerHTML = ele.value;
+                    document.getElementById("password-box").style.display = "none";
+                          $("#final-password").click(function(){
+                                    document.getElementById("password-box").style.display="block";
+                                   document.getElementById("final-password").style.display="none";
+                    });
+                    
+                     document.getElementById("final-password").style.display="block";
+                }
+            
+                   
+        }
+        
+             
+                  function display4(ele) {
+                      
+                
+                       if(event.key ==='Enter')
+                {
+                    document.getElementById('final-bio').innerHTML = ele.value;
+                    document.getElementById("bio-box").style.display = "none";
+                          $("#final-bio").click(function(){
+                                    document.getElementById("bio-box").style.display="block";
+                                   document.getElementById("final-bio").style.display="none";
+                    });
+                    
+                     document.getElementById("final-bio").style.display="block";
+                }
+            
+                   
+        }
+        
+        
+        
+        function showFunction() {
+    var x = document.getElementById("password-box");
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
+}
+        
+                
+        function showFunction2() {
+    var x = document.getElementById("final-password");
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
+}
+                
+        $('#bio-box').keyup(updateCount);
+$('#bio-box').keydown(updateCount);
+
+function updateCount() {
+    var cs = $(this).val().length;
+    $('#characters').text(cs);
+}
+            
+     
+        
+             
+    
+    </script>
+    
+    </body>
+    
+</html>

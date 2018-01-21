@@ -1,0 +1,3135 @@
+<html>
+  <head>
+  <title>Scriblr</title>
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+  <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css" />
+      <meta charset="UTF-8">
+  </head>
+  <body>
+      
+
+      
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <a class="navbar-brand" href="#"><a href="multiitem.html"><img id="nib-logo" src="icons/scriblrnib.png"> <img src="posters/logo.png" id="logo_navbar" /></a></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+              
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><div id="write-button-wannabe">Write</div></a>
+                <div class="dropdown-menu" id="write-dropdown-menu" aria-labelledby="navbarDropdown">
+                <div class="row">
+                    <a class="write-dropdown dropdown-item drop-left-align write-positioning" href="new.html">
+                        New Story <img class="write-list-icons" src="icons/add.png"></a>
+                </div>
+                    <div class="row">
+                    <a class="write-dropdown dropdown-item drop-left-align write-positioning" href="#" data-toggle="modal" data-target="#continueModal">
+                        Continue Story<img class="write-list-icons" src="icons/play.png"></a>
+                </div>
+            </li>
+              
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Browse<img class="browse-icons" src="icons/downarrow.png"></a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <div class="row">
+                    <div class="col-xs-6 drop-border"><a class="dropdown-item drop-left-align" href="shelf.html">My Shelf</a>
+                    </div>
+                    <div class="col-xs-6"><a class="dropdown-item drop-right-align" href="genre.html">Romance</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 drop-border"><a class="dropdown-item drop-left-align" href="#">Originals</a>
+                    </div>
+                    <div class="col-xs-6"><a class="dropdown-item drop-right-align" href="genre.html">Horror</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 drop-border"><a class="dropdown-item drop-left-align" href="#">Poetry</a>
+                    </div>
+                    <div class="col-xs-6"><a class="dropdown-item drop-right-align" href="#">Mystery</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 drop-border"><a class="dropdown-item drop-left-align" href="#">Microfiction</a>
+                    </div>
+                    <div class="col-xs-6"><a class="dropdown-item drop-right-align" href="#">Teen</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 drop-border"><a class="dropdown-item drop-left-align" href="#">Comics</a>
+                    </div>
+                    <div class="col-xs-6"><a class="dropdown-item drop-right-align" href="#">Fantasy</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 drop-border"><a class="dropdown-item drop-left-align" href="#">Contests</a>
+                    </div>
+                    <div class="col-xs-6"><a class="dropdown-item drop-right-align" href="#">Sci-Fi</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 drop-border"><a class="dropdown-item drop-left-align" href="#">Interactive</a>
+                    </div>
+                    <div class="col-xs-6"><a class="dropdown-item drop-right-align" href="#">General</a>
+                    </div>
+                </div>
+            </li>
+                
+            <li class="nav-item search-combo">
+                <a class="nav-link" href="#" id="search_button">
+                    <img id="search-icon" src="icons/search.png">
+                    <input id="search-box" placeholder="Search for books, authors and tags here." type="text">
+                </a>
+            </li>
+            <span id="chhotu-icons">
+              <li class="nav-item">
+                <a class="nav-link" href="chat.html" id="msg-button"><i class="fa fa-envelope nav-icons left" aria-hidden="true"></i></a>
+            </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="notif-button"><i class="fa fa-bell nav-icons left" aria-hidden="true"></i></a>
+            </li>
+                </span>
+              
+              <li class="nav-item" id="profile-dropdown">
+              <a class="nav-link" href="#"><img class="profile-nav" src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg"><img class="browse-icons" id="profile-down-arrow" src="icons/downarrow.png"></a>
+                  <div id="profile-dropdown-content">
+                  <p> <a href="profile2.html">My Profile</a></p>
+                  <p><a href="#"> My Account </a></p>
+                  <p><a href="#"> Settings </a></p>
+                  <p><a id="coral-logout" href="#"> Logout</a></p>
+                  </div>
+              
+              </li>
+              
+          </ul>
+        </div>
+        </div>
+      </nav>
+      
+      
+      
+<!--Sign In Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Sign In</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="sign-up-modal-body">
+        <form>
+          <div class="form-group">
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username/email">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          </div>
+          <h6>New to Scriblr?<a href="#" data-dismiss="modal" data-toggle="modal" data-target="#myModal1"> Sign Up </a></h6>
+          <button type="submit" class="btn btn-danger sign-in">Start Reading!</button>
+
+      </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Sign Up Modal -->
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel1">Sign Up</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="sign-up-modal-body">
+        <form>
+          <div class="form-group">
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          </div>
+          <button type="submit" class="btn btn-danger sign-in">Start Reading!</button>
+
+      </form>
+      </div>
+    </div>
+  </div>
+</div>
+    
+<!-- Continue Book Modal -->
+    
+
+<!-- Expanded Book Modal -->
+<div id="stdModal" class="modal" role="dialog">
+  <div class="modal-dialog std-modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="std-modal-body">
+        <div class="expanded-modal-top">
+        <div class="blackened">
+        <div class="expanded-background-box"></div>
+        </div>
+         <img  class="expanded-image" src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a9/The_Fault_in_Our_Stars.jpg/200px-The_Fault_in_Our_Stars.jpg">
+        <div class="expanded-book-title"> The Fault in Our Stars</div>
+        <div class="expanded-book-author"> John Green</div>
+        <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i></button>
+        
+        <div class="expanded-book-genre"> Young Adult/Romance</div>
+                 <div class='rating-stars text-center'>
+    <ul id='stars-expanded'>
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+            
+        <div class="views-expanded"><img class="standard-element-icon-expanded" src="icons/eye-white.png"><span class="view-number-expanded">2.3M</span> </div>
+            
+            <div class="read-later-icon-expanded"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+            
+        </div>
+          <div class="expanded-modal-middle">
+            
+        <div><button class="read-button"><i class="fa fa-book" aria-hidden="true"></i>Read</button> </div>
+        
+        <div><button class="shelf-button"><i class="fa fa-plus" aria-hidden="true"></i>My Shelf</button> </div>
+        
+            </div>
+    
+          
+        <div class="expanded-modal-bottom">
+<div class="tabs-box">
+          <ul class="nav nav-pills" id="tabs-ul">
+  <li class="active expanded-tabs lefter"><a class="greyed-links" data-toggle="pill" href="#about-tab">About</a></li>
+  <li class=" expanded-tabs"><a class="greyed-links" data-toggle="pill" href="#episodes-tab">Episodes</a></li>
+  <li class=" expanded-tabs"><a class="greyed-links" data-toggle="pill" href="#similar-tab">Similar</a></li>
+</ul>
+</div>
+<div class="tab-content">
+  <div id="about-tab" class="tab-pane fade in active">
+    <p id="expanded-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum aliquam nunc, at viverra purus imperdiet sed. Vestibulum sit amet imperdiet lacus. Integer fermentum magna at nisi imperdiet dignissim quis at ex. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus vel lacus justo. Pellentesque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus vel lacus justo. Pellentesque.</p>
+      
+    <div class="expanded-additional-info">
+        
+      <div class="expanded-info-titles"> Format</div>
+      <div class="expanded-info-val"> Novel </div>
+        <div class="expanded-info-titles"> Pages</div>
+      <div class="expanded-info-val"> 432</div>
+        <div class="expanded-info-titles"> Upload Date</div>
+      <div class="expanded-info-val"> 12th Jan, 2017 </div>
+      
+      
+      </div>
+  </div>
+  <div id="episodes-tab" class="tab-pane fade">
+    <h3>Menu 1</h3>
+    <p>Some content in menu 1.</p>
+  </div>
+  <div id="similar-tab" class="tab-pane fade">
+    <h3>Menu 2</h3>
+    <p>Some content in menu 2.</p>
+  </div>
+</div>
+          
+          
+          </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+    
+    <!-- Trigger the modal with a button -->
+
+<!-- Modal -->
+<div id="continueModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content" id="continue-editor-modal">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title" id="continue-write-header">My Stories</h4>
+      </div>
+      <div class="modal-body">
+        <div class="continue-write-element">
+           <img class="continue-write-image" src ="posters/2.jpg"> 
+           <h5 class="continue-editor-title">The Lightning Thief </h5>
+            <p class="continue-editor-summary"> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+              <p class="continue-editor-info created-alignment"> Created:<span class="continue-editor-bold"> 1st May, 2016.</span></p>
+              <p class="continue-editor-info"> Last Updated: <span class="continue-editor-bold"> 31st June, 2017.</span></p>
+            <div class="continue-editor-right">
+            <button class="continue-write-button">Continue Writing </button>
+            <div class="view-as-reader"><a class="unstyled-links" href="#"><img class="view-as-reader-icon" src="icons/eye.png"> View as reader </a></div>
+            <div class="view-as-reader"><a class="unstyled-links" href="#"><img class="view-as-reader-icon" src="icons/edit.png"> Edit Story Details </a></div>
+        </div>
+          </div>
+          
+       <div class="continue-write-element">
+           <img class="continue-write-image" src ="posters/2.jpg"> 
+           <h5 class="continue-editor-title">The Lightning Thief </h5>
+            <p class="continue-editor-summary"> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+              <p class="continue-editor-info created-alignment"> Created:<span class="continue-editor-bold"> 1st May, 2016.</span></p>
+              <p class="continue-editor-info"> Last Updated: <span class="continue-editor-bold"> 31st June, 2017.</span></p>
+            <div class="continue-editor-right">
+            <button class="continue-write-button">Continue Writing </button>
+            <div class="view-as-reader"><a class="unstyled-links" href="#"><img class="view-as-reader-icon" src="icons/eye.png"> View as reader </a></div>
+            <div class="view-as-reader"><a class="unstyled-links" href="#"><img class="view-as-reader-icon" src="icons/edit.png"> Edit Story Details </a></div>
+        </div>
+          </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+      
+      
+      <div class="grey-body">
+  <div class="single-item" id="featured-slider">
+       <div class="featured-slide-dimensions">
+           <button class="featured-read-button"><i class="fa fa-book" aria-hidden="true"></i>Read</button>
+           <button class="featured-shelf-button"><i class="fa fa-plus" aria-hidden="true"></i>My Shelf</button>
+           <p class="featured-description"> In crime ridden Gotham City, Thomas and Martha Wayne are murdered before young Bruce Wayne's eyes. Although the idealistic Gotham City Police Dept. detective James Gordon, and his cynical partner, Harvey Bullock, seem to solve the case quickly, things are not so simple. </p>
+           <img class="featured-image-title" src="https://www.returndates.com/backgrounds/gotham.logo.png">
+           <img class="featured-image" src="https://images2.alphacoders.com/694/thumb-1920-694497.jpg">
+           <img class="featured-gradient-super" src="posters/featgrad.png">
+      </div>
+   <div class="featured-slide-dimensions">
+           <button class="featured-read-button"><i class="fa fa-book" aria-hidden="true"></i>Read</button>
+           <button class="featured-shelf-button"><i class="fa fa-plus" aria-hidden="true"></i>My Shelf</button>
+           <p class="featured-description"> In crime ridden Gotham City, Thomas and Martha Wayne are murdered before young Bruce Wayne's eyes. Although the idealistic Gotham City Police Dept. detective James Gordon, and his cynical partner, Harvey Bullock, seem to solve the case quickly, things are not so simple. </p>
+           <img class="featured-image-title" src="https://www.returndates.com/backgrounds/gotham.logo.png">
+           <img class="featured-image" src="https://images2.alphacoders.com/694/thumb-1920-694497.jpg">
+           <img class="featured-gradient-super" src="posters/featgrad.png">
+      </div>
+         <div class="featured-slide-dimensions">
+           <button class="featured-read-button"><i class="fa fa-book" aria-hidden="true"></i>Read</button>
+           <button class="featured-shelf-button"><i class="fa fa-plus" aria-hidden="true"></i>My Shelf</button>
+           <p class="featured-description"> In crime ridden Gotham City, Thomas and Martha Wayne are murdered before young Bruce Wayne's eyes. Although the idealistic Gotham City Police Dept. detective James Gordon, and his cynical partner, Harvey Bullock, seem to solve the case quickly, things are not so simple. </p>
+           <img class="featured-image-title" src="https://www.returndates.com/backgrounds/gotham.logo.png">
+           <img class="featured-image" src="https://images2.alphacoders.com/694/thumb-1920-694497.jpg">
+           <img class="featured-gradient-super" src="posters/featgrad.png">
+      </div>
+         <div class="featured-slide-dimensions">
+           <button class="featured-read-button"><i class="fa fa-book" aria-hidden="true"></i>Read</button>
+           <button class="featured-shelf-button"><i class="fa fa-plus" aria-hidden="true"></i>My Shelf</button>
+           <p class="featured-description"> In crime ridden Gotham City, Thomas and Martha Wayne are murdered before young Bruce Wayne's eyes. Although the idealistic Gotham City Police Dept. detective James Gordon, and his cynical partner, Harvey Bullock, seem to solve the case quickly, things are not so simple. </p>
+           <img class="featured-image-title" src="https://www.returndates.com/backgrounds/gotham.logo.png">
+           <img class="featured-image" src="https://images2.alphacoders.com/694/thumb-1920-694497.jpg">
+           <img class="featured-gradient-super" src="posters/featgrad.png">
+      </div>
+         <div class="featured-slide-dimensions">
+           <button class="featured-read-button"><i class="fa fa-book" aria-hidden="true"></i>Read</button>
+           <button class="featured-shelf-button"><i class="fa fa-plus" aria-hidden="true"></i>My Shelf</button>
+           <p class="featured-description"> In crime ridden Gotham City, Thomas and Martha Wayne are murdered before young Bruce Wayne's eyes. Although the idealistic Gotham City Police Dept. detective James Gordon, and his cynical partner, Harvey Bullock, seem to solve the case quickly, things are not so simple. </p>
+           <img class="featured-image-title" src="https://www.returndates.com/backgrounds/gotham.logo.png">
+           <img class="featured-image" src="https://images2.alphacoders.com/694/thumb-1920-694497.jpg">
+           <img class="featured-gradient-super" src="posters/featgrad.png">
+      </div>
+         <div class="featured-slide-dimensions">
+           <button class="featured-read-button"><i class="fa fa-book" aria-hidden="true"></i>Read</button>
+           <button class="featured-shelf-button"><i class="fa fa-plus" aria-hidden="true"></i>My Shelf</button>
+           <p class="featured-description"> In crime ridden Gotham City, Thomas and Martha Wayne are murdered before young Bruce Wayne's eyes. Although the idealistic Gotham City Police Dept. detective James Gordon, and his cynical partner, Harvey Bullock, seem to solve the case quickly, things are not so simple. </p>
+           <img class="featured-image-title" src="https://www.returndates.com/backgrounds/gotham.logo.png">
+           <img class="featured-image" src="https://images2.alphacoders.com/694/thumb-1920-694497.jpg">
+           <img class="featured-gradient-super" src="posters/featgrad.png">
+      </div>
+</div>
+    
+<div class="grey-body">
+ <div class="body-container">
+     
+     <!-- ORIGINALS SLIDERS BEGINS -->
+     
+     
+    <div class="coral-headers"><span class="lining"> Scriblr Originals</span> </div>
+  <div class="responsive">
+    <div class="slide-dimensions" data-toggle="modal" data-target="#stdModal"><img class="original-image" src="https://about.canva.com/wp-content/uploads/sites/3/2015/01/art_bookcover.png"></div>
+    <div class="slide-dimensions" data-toggle="modal" data-target="#stdModal"><img class="original-image" src="https://about.canva.com/wp-content/uploads/sites/3/2015/01/creative_bookcover.png"></div>
+    <div class="slide-dimensions" data-toggle="modal" data-target="#stdModal"><img class="original-image" src="http://wwwcdn.printmag.com/wp-content/uploads/1984-book-covers-2.jpg"></div>
+      <div class="slide-dimensions" data-toggle="modal" data-target="#stdModal"><img class="original-image" src="https://99designs-blog.imgix.net/wp-content/uploads/2017/07/latest-1-e1500061170993.jpg?auto=format&q=60&fit=max&w=930"></div>
+      <div class="slide-dimensions" data-toggle="modal" data-target="#stdModal"><img class="original-image" src="https://i1.wp.com/www.casualoptimist.com/wp-content/uploads/2016/11/As-I-Descended-design-michelle-taormina.jpg"></div>
+      <div class="slide-dimensions" data-toggle="modal" data-target="#stdModal"><img class="original-image" src="https://marketplace.canva.com/MACB5G7TBAg/2/0/thumbnail_large/canva-brown-building-business-book-cover-MACB5G7TBAg.jpg"></div>
+      <div class="slide-dimensions" data-toggle="modal" data-target="#stdModal"><img class="original-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeVJqWnfLZMD7gT5qNUfM5x_jfvPEuEh1i65auPN78cPJ-f6gyYQ"></div>
+      <div class="slide-dimensions" data-toggle="modal" data-target="#stdModal"><img class="original-image" src="https://about.canva.com/wp-content/uploads/sites/3/2015/01/vintage_bookcover.png"></div>
+      <div class="slide-dimensions" data-toggle="modal" data-target="#stdModal"><img class="original-image" src="posters/5.jpg"></div>
+      <div class="slide-dimensions" data-toggle="modal" data-target="#stdModal"><img class="original-image" src="http://www.wimpykid.com/wp-content/uploads/2014/03/9781419711893-350x521.jpg"></div>
+      <div class="slide-dimensions" data-toggle="modal" data-target="#stdModal"><img class="original-image" src="http://vignette1.wikia.nocookie.net/doawk/images/c/ca/Diary_of_a_Wimpy_Kid_Cabin_Fever_cover.jpg/revision/latest?cb=20110619014403"></div>
+      <div class="slide-dimensions" data-toggle="modal" data-target="#stdModal"><img class="original-image" src="https://images-na.ssl-images-amazon.com/images/I/51DER1phkML.jpg"></div>
+      
+  </div>
+     
+     <!-- CONTINUE READING SLIDER BEGINS -->
+     
+     
+      <div class="coral-headers"><span class="lining">Continue Reading</span></div>
+       <div class="cont-responsive ">
+    <div class="continue-slide-dimensions">
+        <img class="continue-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbBxutPX_g5QIv7zRvXVxuF7XtqtBZCUipms7JeWccQ88dNX-n"><img class="gradient-positioning" src="posters/gradient.png">
+        <div class="genre-write-titles"> Skyrim</div>
+        <div class="genre-write-authors"> Justin Phillips</div>
+        <div class="progress-bar-wrapper">
+        <div class="progress-bar-coral"></div>
+        </div>
+        <div class="percentage-done"> 37% Completed</div>
+        
+    </div>
+           
+    <div class="continue-slide-dimensions">
+         <img class="continue-image" src="https://cdn.pastemagazine.com/www/system/images/photo_albums/best-book-covers-so-far-17/large/1bookccomb.jpg?1384968217"><img class="gradient-positioning" src="posters/gradient.png">
+        <div class="genre-write-titles"> Elvis and Nixon</div>
+        <div class="genre-write-authors"> Justin Phillips</div>
+        <div class="progress-bar-wrapper">
+        <div class="progress-bar-coral"></div>
+        </div>
+        <div class="percentage-done"> 37% Completed</div>
+    </div>
+           
+    <div class="continue-slide-dimensions">
+         <img class="continue-image" src="https://marketplace.canva.com/MACXC0twKgo/1/0/thumbnail_large/canva-green-and-pink-science-fiction-book-cover-MACXC0twKgo.jpg"><img class="gradient-positioning" src="posters/gradient.png">
+        <div class="genre-write-titles"> Perks of being a Wallflower</div>
+        <div class="genre-write-authors"> Justin Phillips</div>
+        <div class="progress-bar-wrapper">
+        <div class="progress-bar-coral"></div>
+        </div>
+        <div class="percentage-done"> 37% Completed</div>
+           </div>
+           
+           
+      <div class="continue-slide-dimensions">
+         <img class="continue-image" src="https://cdn.pastemagazine.com/www/system/images/photo_albums/30-best-book-covers-2016/large/2swingtimecover.jpg?1384968217"><img class="gradient-positioning" src="posters/gradient.png">
+        <div class="genre-write-titles"> Perks of being a Wallflower</div>
+        <div class="genre-write-authors"> Justin Phillips</div>
+        <div class="progress-bar-wrapper">
+        <div class="progress-bar-coral"></div>
+        </div>
+        <div class="percentage-done"> 37% Completed</div>
+    </div>
+           
+    <div class="continue-slide-dimensions">
+         <img class="continue-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwPKxwbTf8PelgxZYkiIyyk_hLJ0IcXSSXiCp0BoLLhzRPePS5"><img class="gradient-positioning" src="posters/gradient.png">
+        <div class="genre-write-titles"> Perks of being a Wallflower</div>
+        <div class="genre-write-authors"> Justin Phillips</div>
+        <div class="progress-bar-wrapper">
+        <div class="progress-bar-coral"></div>
+        </div>
+        <div class="percentage-done"> 37% Completed</div>
+    </div>    
+           
+    <div class="continue-slide-dimensions">
+         <img class="continue-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPlnhXVQzkNcuYsD41Lg5sX8Ed6DX-Ysv0dSmB5nDYo5d8qrx6"><img class="gradient-positioning" src="posters/gradient.png">
+        <div class="genre-write-titles"> Perks of being a Wallflower</div>
+        <div class="genre-write-authors"> Justin Phillips</div>
+        <div class="progress-bar-wrapper">
+        <div class="progress-bar-coral"></div>
+        </div>
+        <div class="percentage-done"> 37% Completed</div>
+    </div>
+           
+           
+     <div class="continue-slide-dimensions">
+         <img class="continue-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcYLBQiHsawV_GuIekerCz6MTVuEenhRB4JBQv6qnlPPGX_-eETw"><img class="gradient-positioning" src="posters/gradient.png">
+        <div class="genre-write-titles"> Elvis and Nixon</div>
+        <div class="genre-write-authors"> Justin Phillips</div>
+        <div class="progress-bar-wrapper">
+        <div class="progress-bar-coral"></div>
+        </div>
+        <div class="percentage-done"> 37% Completed</div>
+    </div>
+           
+    <div class="continue-slide-dimensions">
+         <img class="continue-image" src="posters/b.jpg"><img class="gradient-positioning" src="posters/gradient.png">
+        <div class="genre-write-titles"> Elvis and Nixon</div>
+        <div class="genre-write-authors"> Justin Phillips</div>
+        <div class="progress-bar-wrapper">
+        <div class="progress-bar-coral"></div>
+        </div>
+        <div class="percentage-done"> 37% Completed</div>
+    </div>
+           
+           
+      <div class="continue-slide-dimensions">
+         <img class="continue-image" src="posters/b.jpg"><img class="gradient-positioning" src="posters/gradient.png">
+        <div class="genre-write-titles"> Elvis and Nixon</div>
+        <div class="genre-write-authors"> Justin Phillips</div>
+        <div class="progress-bar-wrapper">
+        <div class="progress-bar-coral"></div>
+        </div>
+        <div class="percentage-done"> 37% Completed</div>
+    </div>  
+           
+           
+      <div class="continue-slide-dimensions">
+         <img class="continue-image" src="posters/b.jpg"><img class="gradient-positioning" src="posters/gradient.png">
+        <div class="genre-write-titles"> Elvis and Nixon</div>
+        <div class="genre-write-authors"> Justin Phillips</div>
+        <div class="progress-bar-wrapper">
+        <div class="progress-bar-coral"></div>
+        </div>
+        <div class="percentage-done"> 37% Completed</div>
+    </div>
+           
+           
+       <div class="continue-slide-dimensions">
+         <img class="continue-image" src="https://www.juniorlibraryguild.com/images/9781419711329/CoverArt/9781419711329_zoom.jpg"><img class="gradient-positioning" src="posters/gradient.png">
+        <div class="genre-write-titles"> Elvis and Nixon</div>
+        <div class="genre-write-authors"> Justin Phillips</div>
+        <div class="progress-bar-wrapper">
+        <div class="progress-bar-coral"></div>
+        </div>
+        <div class="percentage-done"> 37% Completed</div>
+    </div> 
+           
+           
+         <div class="continue-slide-dimensions">
+         <img class="continue-image" src="https://vignette2.wikia.nocookie.net/doawk/images/b/b9/Diary-of-a-wimpy-kid-4-dog-days.jpg/revision/latest?cb=20101108192801"><img class="gradient-positioning" src="posters/gradient.png">
+        <div class="genre-write-titles"> Elvis and Nixon</div>
+        <div class="genre-write-authors"> Justin Phillips</div>
+        <div class="progress-bar-wrapper">
+        <div class="progress-bar-coral"></div>
+        </div>
+        <div class="percentage-done"> 37% Completed</div>
+    </div>  
+           
+  
+  </div>
+     <div class="expanded-book-view"></div>
+     
+     <!--- RECOMMENDED SLIDER BEGINS -->
+     
+     
+     <div class="coral-headers move-this-up"><span class="lining">Recommended</span> </div>
+     
+            <div class="rec-responsive">
+    <div class="rec-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="rec-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMfy7L7YOoNc99RefcaHGwzlTd9aU89GaORv4zmFpUpJZJGZSa">
+        <div class="rec-write-titles"> Please Work</div>
+        <div class="rec-write-authors"> Justin Phillips</div>
+         <div class='rating-stars text-center'>
+    <ul id='stars'>
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+        <div class="views"><img class="standard-element-icon" src="icons/eye-grey.png"><span class="view-number">2.3M</span> </div>
+       <p class="non-expanded-summary"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel faucibus mi. Suspendisse imperdiet quis eros eget condimentum. Suspendisse maximus diam at turpis mollis, vel dapibus tortor ornare. </p>
+        
+    </div>
+           
+     <div class="rec-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="rec-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7pCciFc8c-JX58R6PzcdXVCvIZCCQbDIfDm_L5DuTinBA3gFW">
+        <div class="rec-write-titles"> Perks of being a Wallflower</div>
+        <div class="rec-write-authors"> Justin Phillips</div>
+         <div class='rating-stars text-center'>
+    <ul id='stars'>
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+        <div class="views"><img class="standard-element-icon" src="icons/eye-grey.png"><span class="view-number">2.3M</span> </div>
+       <p class="non-expanded-summary"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel faucibus mi. Suspendisse imperdiet quis eros eget condimentum. Suspendisse maximus diam at turpis mollis, vel dapibus tortor o. </p>
+        
+    </div>
+                
+                    <div class="rec-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="rec-image" src="https://21993-presscdn-pagely.netdna-ssl.com/wp-content/uploads/2017/07/They_Both_Die_at_the_End_cover.jpg">
+        <div class="rec-write-titles"> Perks of being a Wallflower</div>
+        <div class="rec-write-authors"> Justin Phillips</div>
+         <div class='rating-stars text-center'>
+    <ul id='stars'>
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+        <div class="views"><img class="standard-element-icon" src="icons/eye-grey.png"><span class="view-number">2.3M</span> </div>
+       <p class="non-expanded-summary"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel faucibus mi. Suspendisse imperdiet quis eros eget condimentum.  </p>
+        
+    </div>
+                
+                    <div class="rec-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="rec-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvmF2ImqZtw6FdutsH_OAsWnhKnI7MtYGja8O2JZTwY4HSzOGFNw">
+        <div class="rec-write-titles"> Perks of being a Wallflower</div>
+        <div class="rec-write-authors"> Justin Phillips</div>
+         <div class='rating-stars text-center'>
+    <ul id='stars'>
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+        <div class="views"><img class="standard-element-icon" src="icons/eye-grey.png"><span class="view-number">2.3M</span> </div>
+       <p class="non-expanded-summary"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel faucibus mi. Suspendisse imperdiet quis eros eget condimentum. Suspendisse maximus diam at turpis mollis, vel dapibus tortor   </p>
+        
+    </div>
+      
+                        <div class="rec-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="rec-image" src="http://www.theenglishgroup.co.uk/wp-content/uploads/2013/12/2-fear-of-flying1.jpg">
+        <div class="rec-write-titles"> Perks of being a Wallflower</div>
+        <div class="rec-write-authors"> Justin Phillips</div>
+         <div class='rating-stars text-center'>
+    <ul id='stars'>
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+        <div class="views"><img class="standard-element-icon" src="icons/eye-grey.png"><span class="view-number">2.3M</span> </div>
+       <p class="non-expanded-summary"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel faucibus mi. Suspendisse imperdiet quis eros eget condimentum. Suspendisse maximus diam at turpis mollis, vel dapibus tortor o. </p>
+        
+    </div>
+                
+                    <div class="rec-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="rec-image" src="posters/a.jpg">
+        <div class="rec-write-titles"> Perks of being a Wallflower</div>
+        <div class="rec-write-authors"> Justin Phillips</div>
+         <div class='rating-stars text-center'>
+    <ul id='stars'>
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+        <div class="views"><img class="standard-element-icon" src="icons/eye-grey.png"><span class="view-number">2.3M</span> </div>
+       <p class="non-expanded-summary"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel faucibus mi. Suspendisse imperdiet quis eros eget condimentum.  </p>
+        
+    </div>
+                
+                    <div class="rec-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="rec-image" src="posters/5.jpg">
+        <div class="rec-write-titles"> Perks of being a Wallflower</div>
+        <div class="rec-write-authors"> Justin Phillips</div>
+         <div class='rating-stars text-center'>
+    <ul id='stars'>
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+        <div class="views"><img class="standard-element-icon" src="icons/eye-grey.png"><span class="view-number">2.3M</span> </div>
+       <p class="non-expanded-summary"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel faucibus mi. Suspendisse imperdiet quis eros eget condimentum. Suspendisse maximus diam at turpis mollis, vel dapibus tortor   </p>
+        
+    </div>
+                
+                     <div class="rec-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="rec-image" src="posters/2.jpg">
+        <div class="rec-write-titles"> Perks of being a Wallflower</div>
+        <div class="rec-write-authors"> Justin Phillips</div>
+         <div class='rating-stars text-center'>
+    <ul id='stars'>
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+        <div class="views"><img class="standard-element-icon" src="icons/eye-grey.png"><span class="view-number">2.3M</span> </div>
+       <p class="non-expanded-summary"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel faucibus mi. Suspendisse imperdiet quis eros eget condimentum. Suspendisse maximus diam at turpis mollis, vel dapibus tortor o. </p>
+        
+    </div>
+                
+                    <div class="rec-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="rec-image" src="posters/a.jpg">
+        <div class="rec-write-titles"> Perks of being a Wallflower</div>
+        <div class="rec-write-authors"> Justin Phillips</div>
+         <div class='rating-stars text-center'>
+    <ul id='stars'>
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+        <div class="views"><img class="standard-element-icon" src="icons/eye-grey.png"><span class="view-number">2.3M</span> </div>
+       <p class="non-expanded-summary"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel faucibus mi. Suspendisse imperdiet quis eros eget condimentum.  </p>
+        
+    </div>
+                
+
+                
+                
+                
+                
+                
+  </div>
+     
+     
+    <!-- Fantasy Row Begins here -->
+     
+     
+     <div class="coral-headers"> <span class="lining">Fantasy</span></div>
+     
+<div class="cont-responsive ">
+    
+   <div class="continue-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSPU03SM2-KCdET1YAFSFmaU-K60Qb1mNlEvP9RVp_-toN4KQI">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+                 <div class='rating-stars text-center'>
+    <ul class="genre-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="genre-eye-position" src="icons/eye-grey.png"><span class="genre-icon-pos ">2.3M</span>
+        
+        
+         
+        
+        
+    </div>
+           
+ <div class="continue-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="http://www.hensher.ca/wp-content/uploads/2011/12/An-Object-of-Beauty-300x443.jpg">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+                 <div class='rating-stars text-center'>
+    <ul class="genre-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="genre-eye-position" src="icons/eye-grey.png"><span class="genre-icon-pos ">2.3M</span>
+        
+        
+         
+        
+        
+    </div>    <div class="continue-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://s-media-cache-ak0.pinimg.com/originals/ea/40/74/ea4074b2ea9a4d8346df95568e4650a3.jpg">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+                 <div class='rating-stars text-center'>
+    <ul class="genre-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="genre-eye-position" src="icons/eye-grey.png"><span class="genre-icon-pos ">2.3M</span>
+        
+        
+         
+        
+        
+    </div> <div class="continue-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgYg6So9ickjboTrkTXUksbnbSrg9MEvnNq-Wfz2swA2LnSToSOQ">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+                 <div class='rating-stars text-center'>
+    <ul class="genre-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="genre-eye-position" src="icons/eye-grey.png"><span class="genre-icon-pos ">2.3M</span>
+        
+        
+         
+        
+        
+    </div>      <div class="continue-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://i1.wp.com/www.casualoptimist.com/wp-content/uploads/2013/12/Tale-for-the-Time-Being.jpg">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+                 <div class='rating-stars text-center'>
+    <ul class="genre-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="genre-eye-position" src="icons/eye-grey.png"><span class="genre-icon-pos ">2.3M</span>
+        
+        
+         
+        
+        
+    </div>   <div class="continue-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpApuAL5zU_MPg3UCbfhxZdbLTCh3A7TuNylvIiElu9AlF_BbY">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+                 <div class='rating-stars text-center'>
+    <ul class="genre-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="genre-eye-position" src="icons/eye-grey.png"><span class="genre-icon-pos ">2.3M</span>
+        
+        
+         
+        
+        
+    </div>
+    
+     <div class="continue-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuBmPWTaBqHO9XpX_uqEylqxdQcbdWnGVNUqNMxfhb24_aqSxA">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+                 <div class='rating-stars text-center'>
+    <ul class="genre-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="genre-eye-position" src="icons/eye-grey.png"><span class="genre-icon-pos ">2.3M</span>
+        
+        
+         
+        
+        
+    </div>
+     <div class="continue-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf_1weWbkbE5XsWeCjHvPiG6REzTh1kp9CtJSP8hAAx8yEEpiM">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+                 <div class='rating-stars text-center'>
+    <ul class="genre-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="genre-eye-position" src="icons/eye-grey.png"><span class="genre-icon-pos ">2.3M</span>
+        
+        
+         
+        
+        
+    </div>
+     <div class="continue-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://worldsbeststory.com/wp-content/uploads/2015/11/51.jpg">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+                 <div class='rating-stars text-center'>
+    <ul class="genre-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="genre-eye-position" src="icons/eye-grey.png"><span class="genre-icon-pos ">2.3M</span>
+        
+        
+         
+        
+        
+    </div>
+     <div class="continue-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_FciWgK7dc3MUzFI923OvMeZQ-vqhfdSN9rJWsUKQkNdEJVYp">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+                 <div class='rating-stars text-center'>
+    <ul class="genre-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="genre-eye-position" src="icons/eye-grey.png"><span class="genre-icon-pos ">2.3M</span>
+        
+        
+         
+        
+        
+    </div>
+     <div class="continue-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0G6UAarHuCZRsRPR93SE7XzIUZU3jPN6SppOYArUIV12I5m9z8g">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+                 <div class='rating-stars text-center'>
+    <ul class="genre-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="genre-eye-position" src="icons/eye-grey.png"><span class="genre-icon-pos ">2.3M</span>
+        
+        
+         
+        
+        
+    </div>
+     <div class="continue-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnXl7CwZUVHh1sKxHMW2s7zBVDqQOBkJP_Tsily5WLYYw_jLSIqg">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+                 <div class='rating-stars text-center'>
+    <ul class="genre-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="genre-eye-position" src="icons/eye-grey.png"><span class="genre-icon-pos ">2.3M</span>
+        
+        
+         
+        
+        
+    </div>
+     <div class="continue-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://i.pinimg.com/736x/be/3e/81/be3e8170b3088e5e4cc43823e1594079--classic-books-james-darcy.jpg">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+                 <div class='rating-stars text-center'>
+    <ul class="genre-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="genre-eye-position" src="icons/eye-grey.png"><span class="genre-icon-pos ">2.3M</span>
+        
+        
+         
+        
+        
+    </div>
+  </div>
+     
+     <!-- The end of the Fantasy Row Genre -->
+                
+                
+    <!-- Start of Writer Spotlight -->
+                
+                
+  </div>
+     
+     <div class="writer-spotlight-box">
+    <div class="spotlight-top-box">
+    <div class="writer-profile-box">
+     <img class="profile-rounder" src="posters/profile.jpg">
+     <div class="spotlight-name"> Peyton Sawyer</div>
+     <button class="spotlight-follow-button"><i class="fa fa-user" aria-hidden="true"></i> Follow</button>
+      <div class="spotlight-followers"> 1337 Followers</div>
+      <div class="spotlight-stories"> 12 Stories </div>
+     </div>
+        
+        <div class="spotlight-title"> Writer Spotlight</div>
+        <div class="spotlight-stars"> Average Rating:                  <div class='rating-stars text-center'>
+    <ul class="spotlight-stars left-move">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+        </div>
+        
+        </div>
+         
+      <div class="cont-responsive ">
+    
+   <div class="continue-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRR8wjASqK4vxYmCIS8w8sckNEZo9AF-L0CwCoj7Pm4F7Vpmm-">
+        <div class="continue-write-titles"> Skyrim and the end of the World</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+                 <div class='rating-stars text-center'>
+    <ul class="genre-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="genre-eye-position" src="icons/eye-grey.png"><span class="genre-icon-pos ">2.3M</span>
+        
+        
+         
+        
+        
+    </div>
+           
+ <div class="continue-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXnVHFN_MueOYM9XXEg4E01ASgh_VgVeiBGg2-uaagaqy432oxhQ">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+                 <div class='rating-stars text-center'>
+    <ul class="genre-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="genre-eye-position" src="icons/eye-grey.png"><span class="genre-icon-pos ">2.3M</span>
+        
+        
+         
+        
+        
+    </div>    <div class="continue-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://21993-presscdn-pagely.netdna-ssl.com/wp-content/uploads/2017/04/The_Truants_cover.jpg">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+                 <div class='rating-stars text-center'>
+    <ul class="genre-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="genre-eye-position" src="icons/eye-grey.png"><span class="genre-icon-pos ">2.3M</span>
+        
+        
+         
+        
+        
+    </div> <div class="continue-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn0bPOrME3Wz9_b1mVSV6LlQRl-gho5ygzafFD-K2Vg2X0QW8uJg">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+                 <div class='rating-stars text-center'>
+    <ul class="genre-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="genre-eye-position" src="icons/eye-grey.png"><span class="genre-icon-pos ">2.3M</span>
+        
+        
+         
+        
+        
+    </div>      <div class="continue-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoNzb-1FzVc2u9KwYyNFZUzA_kGw3_Ab8enpTWwAl0wo2M1pDuvA">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+                 <div class='rating-stars text-center'>
+    <ul class="genre-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="genre-eye-position" src="icons/eye-grey.png"><span class="genre-icon-pos ">2.3M</span>
+        
+        
+         
+        
+        
+    </div>   <div class="continue-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVidIJ1q3FZEtl865oPq3MWe2g8pN98LXYWo1xX6pMIkqSuMzvcQ">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+                 <div class='rating-stars text-center'>
+    <ul class="genre-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="genre-eye-position" src="icons/eye-grey.png"><span class="genre-icon-pos ">2.3M</span>
+        
+        
+         
+        
+        
+    </div>
+    
+     <div class="continue-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyRX5hgpxuRq_qD1Bmmb5DBdJzxgwhEFPlj3H9GGzBOY_NtVjY">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+                 <div class='rating-stars text-center'>
+    <ul class="genre-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="genre-eye-position" src="icons/eye-grey.png"><span class="genre-icon-pos ">2.3M</span>
+        
+        
+         
+        
+        
+    </div>
+     <div class="continue-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="posters/c.jpg">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+                 <div class='rating-stars text-center'>
+    <ul class="genre-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="genre-eye-position" src="icons/eye-grey.png"><span class="genre-icon-pos ">2.3M</span>
+        
+        
+         
+        
+        
+    </div>
+     <div class="continue-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="posters/c.jpg">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+                 <div class='rating-stars text-center'>
+    <ul class="genre-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="genre-eye-position" src="icons/eye-grey.png"><span class="genre-icon-pos ">2.3M</span>
+        
+        
+         
+        
+        
+    </div>
+     <div class="continue-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="posters/2.jpg">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+                 <div class='rating-stars text-center'>
+    <ul class="genre-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="genre-eye-position" src="icons/eye-grey.png"><span class="genre-icon-pos ">2.3M</span>
+        
+        
+         
+        
+        
+    </div>
+     <div class="continue-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="posters/1.jpg">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+                 <div class='rating-stars text-center'>
+    <ul class="genre-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="genre-eye-position" src="icons/eye-grey.png"><span class="genre-icon-pos ">2.3M</span>
+        
+        
+         
+        
+        
+    </div>
+     <div class="continue-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT_CZ-oF9UOh5JDe_nk4Y4Jl6VE1d0-mFilIkH4HMxowqHJiQaDQ">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+                 <div class='rating-stars text-center'>
+    <ul class="genre-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="genre-eye-position" src="icons/eye-grey.png"><span class="genre-icon-pos ">2.3M</span>
+        
+        
+         
+        
+        
+    </div>
+     <div class="continue-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://www.juniorlibraryguild.com/images/9781419711329/CoverArt/9781419711329_zoom.jpg">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+                 <div class='rating-stars text-center'>
+    <ul class="genre-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="genre-eye-position" src="icons/eye-grey.png"><span class="genre-icon-pos ">2.3M</span>
+        
+        
+         
+        
+        
+    </div>
+  </div>   
+ </div>
+    
+    <!-- End of Writer Spotlight -->
+    
+    <!-- Start of Episodic Row -->
+    
+             
+        <div class="coral-headers move-down"> <span class="lining">Episodic Series</span></div>  
+         
+         
+     <div class="ep-responsive">
+         
+         
+      
+         
+         <div class="ep-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+             <img class="ep-image" src="https://i1.wp.com/www.casualoptimist.com/wp-content/uploads/2016/11/As-I-Descended-design-michelle-taormina.jpg">
+             <div class="ep-series-title"> Guardians of the Galaxy Reboot Is Finally Working</div>
+             <div class="ep-series-author"> Dan Brown</div>
+             <div class="ep-info"> <span class="number-of-seasons"> 6 seasons</span><i class="fa fa-circle" aria-hidden="true"></i><span class="time-per-episode"> 12 mins/episode</span></div>
+             
+            <div class="ep-summary"> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.It is also established Shreyash is annoying.</div>
+             
+                            <div class='rating-stars text-center'>
+    <ul class="episodic-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="ep-view-icon" src="icons/eye-grey.png"><span class="ep-view-number">2.3M</span>
+         </div>
+         
+                  <div class="ep-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+             <img class="ep-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7kZ0WrrzRGzSloRdeN96eo9CK6YYFY0ezZ2lR57W2SGiJrZN1dg">
+             <div class="ep-series-title"> Guardians of the Galaxy Was Good</div>
+             <div class="ep-series-author"> Dan Brown</div>
+             <div class="ep-info"> <span class="number-of-seasons"> 6 seasons</span><i class="fa fa-circle" aria-hidden="true"></i><span class="time-per-episode"> 12 mins/episode</span></div>
+             
+            <div class="ep-summary"> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.It is also established Shreyash is annoying.</div>
+             
+                            <div class='rating-stars text-center'>
+    <ul class="episodic-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="ep-view-icon" src="icons/eye-grey.png"><span class="ep-view-number ">2.3M</span>
+         </div>
+         
+                  <div class="ep-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+             <img class="ep-image" src="http://3.bp.blogspot.com/-U79yI72pQts/VW_XnTgdTiI/AAAAAAAAL3I/yF17H1IsopI/s1600/Finding%2BAudrey%2BCover%2BJpeg.jpg">
+             <div class="ep-series-title"> Guardians</div>
+             <div class="ep-series-author"> Dan Brown</div>
+             <div class="ep-info"> <span class="number-of-seasons"> 6 seasons</span><i class="fa fa-circle" aria-hidden="true"></i><span class="time-per-episode"> 12 mins/episode</span></div>
+             
+            <div class="ep-summary"> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.It is also established Shreyash is annoying.</div>
+             
+                            <div class='rating-stars text-center'>
+    <ul class="episodic-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="ep-view-icon" src="icons/eye-grey.png"><span class="ep-view-number ">2.3M</span>
+         </div>
+         
+                  <div class="ep-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+             <img class="ep-image" src="https://i.pinimg.com/736x/f9/d9/d7/f9d9d785285227600194c414264370ff--minimalist-book-cover-minimalist-art.jpg">
+             <div class="ep-series-title"> Guardians</div>
+             <div class="ep-series-author"> Dan Brown</div>
+             <div class="ep-info"> <span class="number-of-seasons"> 6 seasons</span><i class="fa fa-circle" aria-hidden="true"></i><span class="time-per-episode"> 12 mins/episode</span></div>
+             
+            <div class="ep-summary"> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.It is also established Shreyash is annoying.</div>
+             
+                            <div class='rating-stars text-center'>
+    <ul class="episodic-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="ep-view-icon" src="icons/eye-grey.png"><span class="ep-view-number ">2.3M</span>
+         </div>
+         
+                  <div class="ep-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+             <img class="ep-image" src="posters/1.jpg">
+             <div class="ep-series-title"> Guardians</div>
+             <div class="ep-series-author"> Dan Brown</div>
+             <div class="ep-info"> <span class="number-of-seasons"> 6 seasons</span><i class="fa fa-circle" aria-hidden="true"></i><span class="time-per-episode"> 12 mins/episode</span></div>
+             
+            <div class="ep-summary"> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.</div>
+             
+                            <div class='rating-stars text-center'>
+    <ul class="episodic-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="ep-view-icon" src="icons/eye-grey.png"><span class="ep-view-number ">2.3M</span>
+         </div>
+         
+                  <div class="ep-slide-dimensions">
+             <img class="ep-image" src="posters/1.jpg">
+             <div class="ep-series-title"> Guardians</div>
+             <div class="ep-series-author"> Dan Brown</div>
+             <div class="ep-info"> <span class="number-of-seasons"> 6 seasons</span><i class="fa fa-circle" aria-hidden="true"></i><span class="time-per-episode"> 12 mins/episode</span></div>
+             
+            <div class="ep-summary"> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.</div>
+             
+                            <div class='rating-stars text-center'>
+    <ul class="episodic-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="ep-view-icon" src="icons/eye-grey.png"><span class="ep-view-number ">2.3M</span>
+         </div>
+         
+                  <div class="ep-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+             <img class="ep-image" src="posters/1.jpg">
+             <div class="ep-series-title"> Guardians</div>
+             <div class="ep-series-author"> Dan Brown</div>
+             <div class="ep-info"> <span class="number-of-seasons"> 6 seasons</span><i class="fa fa-circle" aria-hidden="true"></i><span class="time-per-episode"> 12 mins/episode</span></div>
+             
+            <div class="ep-summary"> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.</div>
+             
+                            <div class='rating-stars text-center'>
+    <ul class="episodic-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="ep-view-icon" src="icons/eye-grey.png"><span class="ep-view-number ">2.3M</span>
+         </div>
+         
+                  <div class="ep-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+             <img class="ep-image" src="posters/1.jpg">
+             <div class="ep-series-title"> Guardians</div>
+             <div class="ep-series-author"> Dan Brown</div>
+             <div class="ep-info"> <span class="number-of-seasons"> 6 seasons</span><i class="fa fa-circle" aria-hidden="true"></i><span class="time-per-episode"> 12 mins/episode</span></div>
+             
+            <div class="ep-summary"> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.</div>
+             
+                            <div class='rating-stars text-center'>
+    <ul class="episodic-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="ep-view-icon" src="icons/eye-grey.png"><span class="ep-view-number ">2.3M</span>
+         </div>
+         
+                  <div class="ep-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+             <img class="ep-image" src="posters/1.jpg">
+             <div class="ep-series-title"> Guardians</div>
+             <div class="ep-series-author"> Dan Brown</div>
+             <div class="ep-info"> <span class="number-of-seasons"> 6 seasons</span><i class="fa fa-circle" aria-hidden="true"></i><span class="time-per-episode"> 12 mins/episode</span></div>
+             
+            <div class="ep-summary"> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.</div>
+             
+                            <div class='rating-stars text-center'>
+    <ul class="episodic-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="ep-view-icon" src="icons/eye-grey.png"><span class="ep-view-number ">2.3M</span>
+         </div>
+         
+         
+        </div>
+    
+    <!-- Mystery Row Begins here -->
+     
+     
+     <div class="coral-headers move-to-left"> <span class="lining">Mystery</span></div>
+     
+<div class="cont-responsive ">
+    
+   <div class="continue-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSPU03SM2-KCdET1YAFSFmaU-K60Qb1mNlEvP9RVp_-toN4KQI">
+        <div class="continue-write-titles"> Skyrim and Olivion and Morrowind</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+                 <div class='rating-stars text-center'>
+    <ul class="genre-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="genre-eye-position" src="icons/eye-grey.png"><span class="genre-icon-pos ">2.3M</span>
+        
+        
+         
+        
+        
+    </div>
+           
+ <div class="continue-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="http://www.hensher.ca/wp-content/uploads/2011/12/An-Object-of-Beauty-300x443.jpg">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+                 <div class='rating-stars text-center'>
+    <ul class="genre-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="genre-eye-position" src="icons/eye-grey.png"><span class="genre-icon-pos ">2.3M</span>
+        
+        
+         
+        
+        
+    </div>    <div class="continue-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://s-media-cache-ak0.pinimg.com/originals/ea/40/74/ea4074b2ea9a4d8346df95568e4650a3.jpg">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+                 <div class='rating-stars text-center'>
+    <ul class="genre-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="genre-eye-position" src="icons/eye-grey.png"><span class="genre-icon-pos ">2.3M</span>
+        
+        
+         
+        
+        
+    </div> <div class="continue-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgYg6So9ickjboTrkTXUksbnbSrg9MEvnNq-Wfz2swA2LnSToSOQ">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+                 <div class='rating-stars text-center'>
+    <ul class="genre-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="genre-eye-position" src="icons/eye-grey.png"><span class="genre-icon-pos ">2.3M</span>
+        
+        
+         
+        
+        
+    </div>      <div class="continue-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://i1.wp.com/www.casualoptimist.com/wp-content/uploads/2013/12/Tale-for-the-Time-Being.jpg">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+                 <div class='rating-stars text-center'>
+    <ul class="genre-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="genre-eye-position" src="icons/eye-grey.png"><span class="genre-icon-pos ">2.3M</span>
+        
+        
+         
+        
+        
+    </div>   <div class="continue-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpApuAL5zU_MPg3UCbfhxZdbLTCh3A7TuNylvIiElu9AlF_BbY">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+                 <div class='rating-stars text-center'>
+    <ul class="genre-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="genre-eye-position" src="icons/eye-grey.png"><span class="genre-icon-pos ">2.3M</span>
+        
+        
+         
+        
+        
+    </div>
+    
+     <div class="continue-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuBmPWTaBqHO9XpX_uqEylqxdQcbdWnGVNUqNMxfhb24_aqSxA">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+                 <div class='rating-stars text-center'>
+    <ul class="genre-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="genre-eye-position" src="icons/eye-grey.png"><span class="genre-icon-pos ">2.3M</span>
+        
+        
+         
+        
+        
+    </div>
+     <div class="continue-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf_1weWbkbE5XsWeCjHvPiG6REzTh1kp9CtJSP8hAAx8yEEpiM">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+                 <div class='rating-stars text-center'>
+    <ul class="genre-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="genre-eye-position" src="icons/eye-grey.png"><span class="genre-icon-pos ">2.3M</span>
+        
+        
+         
+        
+        
+    </div>
+     <div class="continue-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://worldsbeststory.com/wp-content/uploads/2015/11/51.jpg">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+                 <div class='rating-stars text-center'>
+    <ul class="genre-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="genre-eye-position" src="icons/eye-grey.png"><span class="genre-icon-pos ">2.3M</span>
+        
+        
+         
+        
+        
+    </div>
+     <div class="continue-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_FciWgK7dc3MUzFI923OvMeZQ-vqhfdSN9rJWsUKQkNdEJVYp">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+                 <div class='rating-stars text-center'>
+    <ul class="genre-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="genre-eye-position" src="icons/eye-grey.png"><span class="genre-icon-pos ">2.3M</span>
+        
+        
+         
+        
+        
+    </div>
+     <div class="continue-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0G6UAarHuCZRsRPR93SE7XzIUZU3jPN6SppOYArUIV12I5m9z8g">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+                 <div class='rating-stars text-center'>
+    <ul class="genre-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="genre-eye-position" src="icons/eye-grey.png"><span class="genre-icon-pos ">2.3M</span>
+        
+        
+         
+        
+        
+    </div>
+     <div class="continue-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnXl7CwZUVHh1sKxHMW2s7zBVDqQOBkJP_Tsily5WLYYw_jLSIqg">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+                 <div class='rating-stars text-center'>
+    <ul class="genre-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="genre-eye-position" src="icons/eye-grey.png"><span class="genre-icon-pos ">2.3M</span>
+        
+        
+         
+        
+        
+    </div>
+     <div class="continue-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://i.pinimg.com/736x/be/3e/81/be3e8170b3088e5e4cc43823e1594079--classic-books-james-darcy.jpg">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+                 <div class='rating-stars text-center'>
+    <ul class="genre-stars">
+      <li class='star' title='Poor' data-value='1'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Fair' data-value='2'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Average' data-value='3'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Good' data-value='4'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+      <li class='star' title='Excellent' data-value='5'>
+        <i class='fa fa-star fa-fw'></i>
+      </li>
+    </ul>
+  </div>
+         <img class="genre-eye-position" src="icons/eye-grey.png"><span class="genre-icon-pos ">2.3M</span>
+        
+        
+         
+        
+        
+    </div>
+  </div>
+    
+    <!-- End of the Mystery Row -->
+    
+        <div class="coral-headers move-to-left up-top"> <span class="lining">Community Spotlight</span></div>
+     
+<div class="community-responsive down20">
+    
+   <div class="community-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://i.pinimg.com/236x/09/39/88/0939886f16eca78eb3a3dec2d69d8de3--teen-love-books-teen-books-.jpg">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+        <div class="editors-choice-box">
+        <div class="editors-choice-title"> Editor's Choice</div>
+        <i class="fa fa-quote-right" aria-hidden="true"></i>
+        <div class="editor-description"> Gripping plot, excellent characters. A must read.</div>
+        </div>
+    </div>
+           
+   <div class="community-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://cdn.pastemagazine.com/www/articles/1joyridecover.jpg">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+        <div class="editors-choice-box">
+        <div class="editors-choice-title"> Editor's Choice</div>
+        <i class="fa fa-quote-right" aria-hidden="true"></i>
+        <div class="editor-description"> A thought provoking and enlightening read.</div>
+        </div>
+    </div>
+    
+   <div class="community-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://i.pinimg.com/736x/58/70/15/58701539107a72fc61d89849cf5a86ac--ya-books-scary-books-to-read.jpg">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+        <div class="editors-choice-box">
+        <div class="editors-choice-title"> Editor's Choice</div>
+        <i class="fa fa-quote-right" aria-hidden="true"></i>
+        <div class="editor-description"> A fascinating glance at modern teenagers.</div>
+        </div>
+    </div>
+    
+    
+    
+   <div class="community-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://i.pinimg.com/736x/37/4a/97/374a974b6edd1d02da8613807f6ae8c6--ya-books-teen-books.jpg">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+        <div class="editors-choice-box">
+        <div class="editors-choice-title"> Editor's Choice</div>
+        <i class="fa fa-quote-right" aria-hidden="true"></i>
+        <div class="editor-description"> Gripping plot, excellent characters. A must read.</div>
+        </div>
+    </div>
+    
+    
+   <div class="community-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://i.pinimg.com/736x/ea/ed/e0/eaede075ba4f33b87eac77dae121ef57--book-covers-ideas-bookcovers.jpg">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+        <div class="editors-choice-box">
+        <div class="editors-choice-title"> Editor's Choice</div>
+        <i class="fa fa-quote-right" aria-hidden="true"></i>
+        <div class="editor-description"> Gripping plot, excellent characters. A must read.</div>
+        </div>
+    </div>
+    
+   <div class="community-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://images.gr-assets.com/books/1339533695l/10194157.jpg">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+        <div class="editors-choice-box">
+        <div class="editors-choice-title"> Editor's Choice</div>
+        <i class="fa fa-quote-right" aria-hidden="true"></i>
+        <div class="editor-description"> Gripping plot, excellent characters. A must read.</div>
+        </div>
+    </div>
+    
+    
+   <div class="community-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSPU03SM2-KCdET1YAFSFmaU-K60Qb1mNlEvP9RVp_-toN4KQI">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+        <div class="editors-choice-box">
+        <div class="editors-choice-title"> Editor's Choice</div>
+        <i class="fa fa-quote-right" aria-hidden="true"></i>
+        <div class="editor-description"> Gripping plot, excellent characters. A must read.</div>
+        </div>
+    </div>
+    
+   <div class="community-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSPU03SM2-KCdET1YAFSFmaU-K60Qb1mNlEvP9RVp_-toN4KQI">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+        <div class="editors-choice-box">
+        <div class="editors-choice-title"> Editor's Choice</div>
+        <i class="fa fa-quote-right" aria-hidden="true"></i>
+        <div class="editor-description"> Gripping plot, excellent characters. A must read.</div>
+        </div>
+    </div>
+    
+   <div class="community-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSPU03SM2-KCdET1YAFSFmaU-K60Qb1mNlEvP9RVp_-toN4KQI">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+        <div class="editors-choice-box">
+        <div class="editors-choice-title"> Editor's Choice</div>
+        <i class="fa fa-quote-right" aria-hidden="true"></i>
+        <div class="editor-description"> Gripping plot, excellent characters. A must read.</div>
+        </div>
+    </div>
+    
+   <div class="community-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSPU03SM2-KCdET1YAFSFmaU-K60Qb1mNlEvP9RVp_-toN4KQI">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+        <div class="editors-choice-box">
+        <div class="editors-choice-title"> Editor's Choice</div>
+        <i class="fa fa-quote-right" aria-hidden="true"></i>
+        <div class="editor-description"> Gripping plot, excellent characters. A must read.</div>
+        </div>
+    </div>
+    
+   <div class="community-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSPU03SM2-KCdET1YAFSFmaU-K60Qb1mNlEvP9RVp_-toN4KQI">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+        <div class="editors-choice-box">
+        <div class="editors-choice-title"> Editor's Choice</div>
+        <i class="fa fa-quote-right" aria-hidden="true"></i>
+        <div class="editor-description"> Gripping plot, excellent characters. A must read.</div>
+        </div>
+    </div>
+    
+   <div class="community-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSPU03SM2-KCdET1YAFSFmaU-K60Qb1mNlEvP9RVp_-toN4KQI">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+        <div class="editors-choice-box">
+        <div class="editors-choice-title"> Editor's Choice</div>
+        <i class="fa fa-quote-right" aria-hidden="true"></i>
+        <div class="editor-description"> Gripping plot, excellent characters. A must read.</div>
+        </div>
+    </div>
+    
+   <div class="community-slide-dimensions" data-toggle="modal" data-target="#stdModal">
+        <img class="continue-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSPU03SM2-KCdET1YAFSFmaU-K60Qb1mNlEvP9RVp_-toN4KQI">
+        <div class="continue-write-titles"> Skyrim</div>
+        <div class="continue-write-authors"> Justin Phillips</div>
+        <div class="editors-choice-box">
+        <div class="editors-choice-title"> Editor's Choice</div>
+        <i class="fa fa-quote-right" aria-hidden="true"></i>
+        <div class="editor-description"> Gripping plot, excellent characters. A must read.</div>
+        </div>
+    </div>
+  </div>
+    
+        <footer class="smaller">
+            <div> <img class="footer-logo" src="posters/logo.png"></div>
+           <i class="fa fa-facebook" aria-hidden="true"></i>
+           <i class="fa fa-instagram" aria-hidden="true"></i>
+           <i class="fa fa-twitter" aria-hidden="true"></i>
+           <p class="copyright-footer"><i class="fa fa-copyright" aria-hidden="true"></i> Scriblr,2017.</p>
+           
+           <div class="footer-right-links">
+           <a class="footer-links" href="#"> About</a>
+            <a class="footer-links" href="#"> Jobs</a>
+               <a class="footer-links" href="#"> Team</a>
+            <a class="footer-links" href="#"> Terms & Conditions</a>
+               <a class="footer-links" href="#"> Help</a>
+           </div>
+      </footer>
+
+  </div>
+          
+     
+     </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script src="https://use.fontawesome.com/8f37611cde.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js">
+    </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.dotdotdot/3.1.0/jquery.dotdotdot.js"></script>
+    
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      
+$('.responsive').slick({
+  dots: false,
+  arrows: true,
+  infinite: true,
+  speed: 50,
+  slidesToShow: 6,
+ rows:1,
+
+  slidesToScroll: 6,
+  responsive: [
+    {
+      breakpoint: 1780,
+      settings: {
+        slidesToShow: 5,
+        slidesToScroll: 5,
+        centerMode: true,
+        infinite: true,
+        dots: false
+      }
+        
+    },
+      {
+      breakpoint: 1620,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        infinite: true,
+        dots: false
+      }
+        
+    },
+      {
+      breakpoint: 1510,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        infinite: true,
+        dots: false
+      }
+        
+    },
+      {
+      breakpoint: 1330,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+          initialSlide:1,
+        infinite: true,
+        dots: false
+      }
+        
+    },
+    {
+      breakpoint: 1130,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3
+      }
+    },
+      {
+      breakpoint: 910,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false
+      }
+        
+    },
+      {
+      breakpoint: 720,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false
+      }
+        
+    },
+      {
+      breakpoint: 560,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false
+      }
+        
+    },
+      
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+          dots: false
+    
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+        
+        
+        
+        
+        
+    
+        $('.cont-responsive').slick({
+  dots: false,
+  arrows: true,
+  infinite: true,
+  speed: 100,
+    
+  slidesToShow: 4,
+  rows:1,
+  slidesToScroll: 4,
+  responsive: [
+    {
+      breakpoint: 1710,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        infinite: true,
+        dots: false
+      }
+    },
+    {
+      breakpoint: 1320,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+          dots:false
+      }
+    },
+    {
+      breakpoint: 877,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+          dots:false
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+        
+            
+        $('.community-responsive').slick({
+  dots: false,
+  arrows: true,
+  infinite: true,
+  speed: 50,
+   centerMode: false,
+  slidesToShow: 2,
+  rows:1,
+  slidesToScroll: 2,
+  responsive: [
+    {
+      breakpoint: 1710,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false
+      }
+    },
+    {
+      breakpoint: 1320,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+          dots:false
+      }
+    },
+    {
+      breakpoint: 877,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+          dots:false
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+        
+                $('.ep-responsive').slick({
+  dots: false,
+  arrows: true,
+  infinite: true,
+  speed: 100,
+  centerMode: false,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  responsive: [
+    {
+      breakpoint: 1710,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        infinite: true,
+        dots: false
+      }
+    },
+    {
+      breakpoint: 1320,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+          dots:false
+      }
+    },
+    {
+      breakpoint: 877,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+          dots:false
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+        
+        
+        
+         $('.rec-responsive').slick({
+  dots: false,
+  arrows: true,
+  infinite: true,
+  initialSlide:0,
+  speed: 300,
+  slidesToShow: 2,
+ rows: 2,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1710,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false
+      }
+    },
+    {
+      breakpoint: 1320,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+          dots:false
+      }
+    },
+    {
+      breakpoint: 877,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+          dots:false
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+   
+        
+        
+        
+        
+    
+        $('.single-item').slick({
+            dots:false,
+            arrows:true
+        }
+        );
+    });
+  </script>
+    
+   <script>
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#placeholder-image')
+                    .attr('src', e.target.result)
+                    .width(250)
+                    .height(350);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+       
+
+       
+       
+       $('#editorModal').on('shown.bs.modal', function () {
+    $(this).find('#editor-modal-dialog').css({width:'auto',
+                               height:'auto', 
+                              'max-height':'100%'});
+});
+
+       
+       </script>
+    
+    <script>
+    
+    $(document).ready(function(){
+  
+  /* 1. Visualizing things on Hover - See next part for action on click */
+  $('#stars li').on('mouseover', function(){
+    var onStar = parseInt($(this).data('value'), 10); // The star currently mouse on
+   
+    // Now highlight all the stars that's not after the current hovered star
+    $(this).parent().children('li.star').each(function(e){
+      if (e < onStar) {
+        $(this).addClass('hover');
+      }
+      else {
+        $(this).removeClass('hover');
+      }
+    });
+    
+  }).on('mouseout', function(){
+    $(this).parent().children('li.star').each(function(e){
+      $(this).removeClass('hover');
+    });
+  });
+  
+  
+  /* 2. Action to perform on click */
+  $('#stars li').on('click', function(){
+    var onStar = parseInt($(this).data('value'), 10); // The star currently selected
+    var stars = $(this).parent().children('li.star');
+    
+    for (i = 0; i < stars.length; i++) {
+      $(stars[i]).removeClass('selected');
+    }
+    
+    for (i = 0; i < onStar; i++) {
+      $(stars[i]).addClass('selected');
+    }
+    
+    
+  });
+        
+//The Genre Stars
+        
+          $('.genre-stars li').on('mouseover', function(){
+    var onStar = parseInt($(this).data('value'), 10); // The star currently mouse on
+   
+    // Now highlight all the stars that's not after the current hovered star
+    $(this).parent().children('li.star').each(function(e){
+      if (e < onStar) {
+        $(this).addClass('hover');
+      }
+      else {
+        $(this).removeClass('hover');
+      }
+    });
+    
+  }).on('mouseout', function(){
+    $(this).parent().children('li.star').each(function(e){
+      $(this).removeClass('hover');
+    });
+  });
+  
+  
+  /* 2. Action to perform on click */
+  $('.genre-stars li').on('click', function(){
+    var onStar = parseInt($(this).data('value'), 10); // The star currently selected
+    var stars = $(this).parent().children('li.star');
+    
+    for (i = 0; i < stars.length; i++) {
+      $(stars[i]).removeClass('selected');
+    }
+    
+    for (i = 0; i < onStar; i++) {
+      $(stars[i]).addClass('selected');
+    }
+    
+    
+  });
+        
+        
+        
+          $('#stars-expanded li').on('click', function(){
+    var onStar = parseInt($(this).data('value'), 10); // The star currently selected
+    var stars = $(this).parent().children('li.star');
+    
+    for (i = 0; i < stars.length; i++) {
+      $(stars[i]).removeClass('selected');
+    }
+    
+    for (i = 0; i < onStar; i++) {
+      $(stars[i]).addClass('selected');
+    }
+    
+    
+  });
+        
+        
+          $('#stars-expanded li').on('mouseover', function(){
+    var onStar = parseInt($(this).data('value'), 10); // The star currently mouse on
+   
+    // Now highlight all the stars that's not after the current hovered star
+    $(this).parent().children('li.star').each(function(e){
+      if (e < onStar) {
+        $(this).addClass('hover');
+      }
+      else {
+        $(this).removeClass('hover');
+      }
+    });
+    
+  }).on('mouseout', function(){
+    $(this).parent().children('li.star').each(function(e){
+      $(this).removeClass('hover');
+    });
+  });
+        
+        
+        // Writer Spotlight Stars
+        
+          $('.genre-stars li').on('mouseover', function(){
+    var onStar = parseInt($(this).data('value'), 10); // The star currently mouse on
+   
+    // Now highlight all the stars that's not after the current hovered star
+    $(this).parent().children('li.star').each(function(e){
+      if (e < onStar) {
+        $(this).addClass('hover');
+      }
+      else {
+        $(this).removeClass('hover');
+      }
+    });
+    
+  }).on('mouseout', function(){
+    $(this).parent().children('li.star').each(function(e){
+      $(this).removeClass('hover');
+    });
+  });
+  
+  
+  /* 2. Action to perform on click */
+  $('.genre-stars li').on('click', function(){
+    var onStar = parseInt($(this).data('value'), 10); // The star currently selected
+    var stars = $(this).parent().children('li.star');
+    
+    for (i = 0; i < stars.length; i++) {
+      $(stars[i]).removeClass('selected');
+    }
+    
+    for (i = 0; i < onStar; i++) {
+      $(stars[i]).addClass('selected');
+    }
+    
+    
+  });
+        
+        
+        
+          $('.spotlight-stars li').on('click', function(){
+    var onStar = parseInt($(this).data('value'), 10); // The star currently selected
+    var stars = $(this).parent().children('li.star');
+    
+    for (i = 0; i < stars.length; i++) {
+      $(stars[i]).removeClass('selected');
+    }
+    
+    for (i = 0; i < onStar; i++) {
+      $(stars[i]).addClass('selected');
+    }
+    
+    
+  });
+        
+        
+          $('.spotlight-stars li').on('mouseover', function(){
+    var onStar = parseInt($(this).data('value'), 10); // The star currently mouse on
+   
+    // Now highlight all the stars that's not after the current hovered star
+    $(this).parent().children('li.star').each(function(e){
+      if (e < onStar) {
+        $(this).addClass('hover');
+      }
+      else {
+        $(this).removeClass('hover');
+      }
+    });
+    
+  }).on('mouseout', function(){
+    $(this).parent().children('li.star').each(function(e){
+      $(this).removeClass('hover');
+    });
+  });
+        
+        
+        // EPISODIC STARS
+        
+                  $('.episodic-stars li').on('click', function(){
+    var onStar = parseInt($(this).data('value'), 10); // The star currently selected
+    var stars = $(this).parent().children('li.star');
+    
+    for (i = 0; i < stars.length; i++) {
+      $(stars[i]).removeClass('selected');
+    }
+    
+    for (i = 0; i < onStar; i++) {
+      $(stars[i]).addClass('selected');
+    }
+    
+    
+  });
+        
+        
+          $('.episodic-stars li').on('mouseover', function(){
+    var onStar = parseInt($(this).data('value'), 10); // The star currently mouse on
+   
+    // Now highlight all the stars that's not after the current hovered star
+    $(this).parent().children('li.star').each(function(e){
+      if (e < onStar) {
+        $(this).addClass('hover');
+      }
+      else {
+        $(this).removeClass('hover');
+      }
+    });
+    
+  }).on('mouseout', function(){
+    $(this).parent().children('li.star').each(function(e){
+      $(this).removeClass('hover');
+    });
+  });
+        
+        
+        
+    
+        
+        $('.expanded-book-view').click(function(event){
+           event.stopPropagation(); 
+        });
+        
+        $('body').click(function(){
+           $('.expanded-book-view').hide(); 
+        });
+        
+        
+        $('.continue-slide-dimensions').click(function(e){
+            var pWidth = $('.continue-slide-dimensions').outerWidth()+ 100;
+            var pOffset = $(this).offset();
+            if(e.pageX < pWidth)
+                {
+                    $('.expanded-book-view').css("display","block") ;
+            $('.expanded-book-view').css("position","absolute");
+            $('.expanded-book-view').css('top', 600);
+            $('.expanded-book-view').css("left", 0);
+                    event.stopPropagation();
+                }
+            
+                else if(e.pageX <  (2*pWidth)-120 && e.pageX > pWidth)
+                {
+                    $('.expanded-book-view').css("display","block") ;
+            $('.expanded-book-view').css("position","absolute");
+            $('.expanded-book-view').css('top', 600);
+            $('.expanded-book-view').css("left", 270);
+                    event.stopPropagation();
+                }
+            
+              else if( e.pageX<(3*pWidth)-120 && e.pageX >(2*pWidth)-120 && e.pageX > pWidth)
+                {
+                    $('.expanded-book-view').css("display","block") ;
+            $('.expanded-book-view').css("position","absolute");
+            $('.expanded-book-view').css('top', 600);
+            $('.expanded-book-view').css("left", 700);
+                    event.stopPropagation();
+                }
+            
+              else if (e.pageX<(4*pWidth)-120 && e.pageX>(3*pWidth)-120 && e.pageX >(2*pWidth)-120 && e.pageX > pWidth)
+                {
+                    $('.expanded-book-view').css("display","block") ;
+            $('.expanded-book-view').css("position","absolute");
+            $('.expanded-book-view').css('top', 600);
+            $('.expanded-book-view').css("left", 1100);
+                    event.stopPropagation();
+                }
+            
+        });
+        
+        
+        
+         $(".ep-series-title").dotdotdot({
+      // Options go here
+              ellipsis: "\u2026 ",
+             height: "50",
+             tolerance: 0,
+             truncate: "word",
+   });
+        
+                 $(".featured-description").dotdotdot({
+      // Options go here
+              ellipsis: "\u2026 ",
+             height: "100",
+             tolerance: 0,
+             truncate: "word",
+   });
+        
+ 
+        
+        $('#tabs-ul a[href="#about-tab"]').tab('show')
+        
+       
+         
+        
+    });
+        
+     
+
+        
+        
+
+    
+    </script>
+
+  </body>
+</html>
