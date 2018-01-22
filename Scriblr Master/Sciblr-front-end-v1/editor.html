@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>Scriblr Editor</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="editor-container">
+    <a href="multiitem.html"><img id="editor-logo" src="posters/logo.png"></a>
+    <div id="sections-dropdown"> <span class="bold">Section 1: </span>Lorem Ipsum <img class="browse-icons" src="icons/downarrow.png">
+        <div class="section-dropdown-content">
+        <p class="section-element bold"> Sections <span class="coral right"> New Section</span><img  class="sections-images right plus-down" src="icons/plus-coral.png"></p>
+            
+            <div class="section-list-element">
+                <div class="section-list-title"><span class="bold">1:</span>Till Death Do Us Apart</div>
+                <div class="section-list-icon-row">
+                    <div class="section-list-no-views"> 2.2K</div>
+                    <img class="section-list-eye-size" src="icons/eye-grey.png">
+                    <img class="section-list-eye-size" src="icons/edit.png">
+                    <img class="section-list-eye-size" src="icons/delete.png">
+                
+                </div>
+            
+            </div>
+            
+              <div class="section-list-element">
+                <div class="section-list-title"><span class="bold">2:</span>The Attack of the Clones</div>
+                <div class="section-list-icon-row">
+                    <div class="section-list-no-views"> 2.2K</div>
+                    <img class="section-list-eye-size" src="icons/eye-grey.png">
+                    <img class="section-list-eye-size" src="icons/edit.png">
+                    <img class="section-list-eye-size" src="icons/delete.png">
+                
+                </div>
+            
+            </div>
+            
+              <div class="section-list-element">
+                <div class="section-list-title"><span class="bold">3:</span>Till Death Do Us Apart My Love</div>
+                <div class="section-list-icon-row">
+                    <div class="section-list-no-views"> 2.2K</div>
+                    <img class="section-list-eye-size" src="icons/eye-grey.png">
+                    <img class="section-list-eye-size" src="icons/edit.png">
+                    <img class="section-list-eye-size" src="icons/delete.png">
+                
+                </div>
+            
+            </div>
+            
+              <div class="section-list-element">
+                <div class="section-list-title"><span class="bold">4:</span>Do You Remember?</div>
+                <div class="section-list-icon-row">
+                    <div class="section-list-no-views"> 2.2K</div>
+                    <img class="section-list-eye-size" src="icons/eye-grey.png">
+                    <img class="section-list-eye-size" src="icons/edit.png">
+                    <img class="section-list-eye-size" src="icons/delete.png">
+                
+                </div>
+            
+            </div>
+         </div>
+        </div>
+    <button id="publish-button" class="generic-button submit-button"> Publish</button>
+    <button id="editor-save-button" class="generic-button submit-button"> Save</button>
+    <button id="cancel-editor-button" class="generic-button cancel-button"> Cancel </button>
+    
+        <div id="section-title"><input name="section-title" id="section-title-box" placeholder="Section Title" type="text" onkeydown="display(this)">
+        <p id="final-section-name" onkeydown="remove(this)"></p></div>
+        <hr>
+        <div id="writing-space">
+            <textarea id="editor-writing-space" name="user-writing-space"></textarea>    
+            
+            
+            
+        </div>
+        
+        
+       
+        </div>
+         <script type="text/javascript" src="js/jquery-3.2.1.min.js" ></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script src="https://use.fontawesome.com/8f37611cde.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+        
+        
+        <script>
+        function display(ele) {
+            if(event.key ==='Enter')
+                {
+                    document.getElementById('final-section-name').innerHTML = ele.value;
+                    document.getElementById("section-title-box").style.display = "none";
+                          $("#final-section-name").click(function(){
+                                    document.getElementById("section-title-box").style.display="block";
+                                   document.getElementById("final-section-name").style.display="none";
+                    });
+                    
+                     document.getElementById("final-section-name").style.display="block";
+                }
+            
+                   
+        }
+ 
+          $('#editor-writing-space').wysiwyg();
+                   
+   
+                    
+                  
+            
+                        
+            
+            
+        
+        </script>
+    </body>
+
+</html>
